@@ -1,0 +1,414 @@
+Running... /bin/mount -n -t iso9660 -o ro /dev/sr0 /mnt/stage2
+Running... /bin/mount -n -t auto -o ro,loop=/dev/loop0 /tmp/install.img /mnt/runtime
+10:58:39,719 INFO    : Running... ['udevadm', 'trigger', '--action=add', '--subsystem-match=net']
+10:58:39,748 INFO    : Running... ['udevadm', 'trigger', '--action=add', '--subsystem-match=block']
+10:58:39,808 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+10:58:40,039 INFO    : Running... ['udevadm', 'trigger', '--action=add', '--subsystem-match=net']
+10:58:40,054 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+10:58:41,116 INFO    : Running... ['metacity', '--display', ':1', '--sm-disable']
+10:58:41,398 ERROR   : Window manager warning: 0 stored in GConf key /desktop/gnome/peripherals/mouse/cursor_size is out of range 1 to 128
+10:58:42,030 INFO    : Running... ['xrandr', '-q']
+10:58:42,036 INFO    : Screen 0: minimum 1 x 1, current 800 x 600, maximum 4096 x 4096
+10:58:42,037 INFO    : Virtual1 connected 800x600+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+10:58:42,037 INFO    :    800x600       60.00*+  60.32  
+10:58:42,037 INFO    :    2560x1600     59.99  
+10:58:42,037 INFO    :    1920x1440     60.00  
+10:58:42,037 INFO    :    1856x1392     60.00  
+10:58:42,037 INFO    :    1792x1344     60.00  
+10:58:42,037 INFO    :    1920x1200     59.88  
+10:58:42,037 INFO    :    1600x1200     60.00  
+10:58:42,037 INFO    :    1680x1050     59.95  
+10:58:42,037 INFO    :    1400x1050     59.98  
+10:58:42,037 INFO    :    1280x1024     60.02  
+10:58:42,037 INFO    :    1440x900      59.89  
+10:58:42,037 INFO    :    1280x960      60.00  
+10:58:42,037 INFO    :    1360x768      60.02  
+10:58:42,037 INFO    :    1280x800      59.81  
+10:58:42,037 INFO    :    1152x864      75.00  
+10:58:42,038 INFO    :    1280x768      59.87  
+10:58:42,038 INFO    :    1024x768      60.00  
+10:58:42,038 INFO    :    640x480       59.94  
+10:58:42,038 INFO    : Virtual2 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual3 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual4 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual5 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual6 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual7 disconnected (normal left inverted right x axis y axis)
+10:58:42,038 INFO    : Virtual8 disconnected (normal left inverted right x axis y axis)
+10:58:43,069 ERROR   : Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x80000d (CentOS Ins)
+10:58:43,070 ERROR   : Window manager warning: meta_window_activate called by a pager with a 0 timestamp; the pager needs to be fixed.
+11:09:01,574 INFO    : Running... ['udevadm', 'trigger', '--action=change', '--subsystem-match=block']
+11:09:01,677 INFO    : Running... ['modprobe', 'fcoe']
+11:09:01,741 INFO    : Running... ['/usr/libexec/fcoe/fcoe_edd.sh', '-i']
+11:09:01,750 INFO    : No FCoE boot disk information is found in EDD!
+11:09:01,752 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:09:01,761 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:09:01,767 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:09:01,787 INFO    : Running... ['multipath', '-d']
+11:09:01,801 INFO    : Running... ['multipath', '-ll']
+11:09:01,872 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:09:01,895 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:09:01,901 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:09:16,930 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:09:16,939 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:09:16,944 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:09:16,959 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+11:09:16,968 ERROR   : Device sda not found
+11:09:16,968 ERROR   : Command failed
+11:09:16,969 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:09:16,984 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sr0']
+11:09:16,989 ERROR   : Device sr0 not found
+11:09:16,989 ERROR   : Command failed
+11:09:16,990 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:11:45,747 INFO    : Running... ['hostname', '-v', 'oldboyedu-01']
+11:11:45,753 ERROR   : Setting hostname to `oldboyedu-01'
+19:13:26,165 INFO    : Running... ['/usr/sbin/hwclock', '--hctosys']
+11:17:34,825 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:17:34,835 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:17:34,841 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:17:34,867 INFO    : Running... ['multipath', '-d']
+11:17:34,874 INFO    : Running... ['multipath', '-ll']
+11:17:34,896 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:17:34,904 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:17:34,909 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:17:34,974 INFO    : Running... ['modprobe', 'scsi_wait_scan']
+11:17:34,984 INFO    : Running... ['rmmod', 'scsi_wait_scan']
+11:17:34,989 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:17:35,006 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+11:17:35,013 ERROR   : Device sda not found
+11:17:35,013 ERROR   : Command failed
+11:17:35,014 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:17:35,027 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sr0']
+11:17:35,035 ERROR   : Device sr0 not found
+11:17:35,035 ERROR   : Command failed
+11:17:35,036 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+11:23:42,656 INFO    : Running... ['modprobe', 'ext4']
+11:23:42,725 INFO    : Running... ['modprobe', 'ext2']
+11:23:42,743 INFO    : Running... ['modprobe', 'ext3']
+11:23:42,801 INFO    : Running... ['modprobe', 'vfat']
+11:23:42,836 INFO    : Running... ['modprobe', 'xfs']
+12:12:00,828 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sr0']
+12:12:00,844 ERROR   : Device sr0 not found
+12:12:00,844 ERROR   : Command failed
+12:12:00,845 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,869 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:00,874 ERROR   : Device sda not found
+12:12:00,874 ERROR   : Command failed
+12:12:00,875 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,892 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:00,897 ERROR   : Device sda not found
+12:12:00,897 ERROR   : Command failed
+12:12:00,898 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,916 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:00,921 ERROR   : Device sda not found
+12:12:00,921 ERROR   : Command failed
+12:12:00,922 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,937 INFO    : Running... ['swapoff', '-a']
+12:12:00,941 ERROR   : swapoff: /etc/fstab: open failed: No such file or directory
+12:12:00,943 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sr0']
+12:12:00,949 ERROR   : Device sr0 not found
+12:12:00,950 ERROR   : Command failed
+12:12:00,950 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,969 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:00,974 ERROR   : Device sda not found
+12:12:00,974 ERROR   : Command failed
+12:12:00,974 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:00,992 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:00,997 ERROR   : Device sda not found
+12:12:00,998 ERROR   : Command failed
+12:12:00,999 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,014 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:01,021 ERROR   : Device sda not found
+12:12:01,021 ERROR   : Command failed
+12:12:01,022 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,097 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,121 INFO    : Running... ['dmsetup', 'info', '--columns', '--noheadings', '-o', 'devno', '/dev/sda']
+12:12:01,134 ERROR   : Device sda not found
+12:12:01,134 ERROR   : Command failed
+12:12:01,136 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,161 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,203 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,226 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,242 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,289 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,349 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,420 INFO    : Running... ['mke2fs', '-t', 'ext4', '/dev/sda1']
+12:12:01,428 INFO    : Filesystem label=
+12:12:01,431 INFO    : OS type: Linux
+12:12:01,431 INFO    : Block size=1024 (log=0)
+12:12:01,431 INFO    : Fragment size=1024 (log=0)
+12:12:01,432 INFO    : Stride=0 blocks, Stripe width=0 blocks
+12:12:01,432 INFO    : 51200 inodes, 204800 blocks
+12:12:01,433 INFO    : 10240 blocks (5.00%) reserved for the super user
+12:12:01,433 INFO    : First data block=1
+12:12:01,433 INFO    : Maximum filesystem blocks=67371008
+12:12:01,433 INFO    : 25 block groups
+12:12:01,434 INFO    : 8192 blocks per group, 8192 fragments per group
+12:12:01,437 INFO    : 2048 inodes per group
+12:12:01,439 INFO    : Superblock backups stored on blocks: 
+12:12:01,439 INFO    : 	8193, 24577, 40961, 57345, 73729
+12:12:01,439 INFO    : 
+12:12:01,482 INFO    : Writing inode tables:  0/25 1/25 2/25 3/25 4/25 5/25 6/25 7/25 8/25 9/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25done                            
+12:12:01,520 INFO    : Creating journal (4096 blocks): done
+12:12:01,589 INFO    : Writing superblocks and filesystem accounting information: done
+12:12:01,589 INFO    : 
+12:12:01,595 INFO    : This filesystem will be automatically checked every 26 mounts or
+12:12:01,596 INFO    : 180 days, whichever comes first.  Use tune2fs -c or -i to override.
+12:12:01,604 ERROR   : mke2fs 1.41.12 (17-May-2010)
+12:12:01,610 INFO    : Running... ['tune2fs', '-c0', '-i0', '-ouser_xattr,acl', '/dev/sda1']
+12:12:01,638 INFO    : tune2fs 1.41.12 (17-May-2010)
+12:12:01,638 INFO    : Setting maximal mount count to -1
+12:12:01,638 INFO    : Setting interval between checks to 0 seconds
+12:12:01,639 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,669 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,708 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,776 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,846 INFO    : Running... ['mkswap', '-f', '/dev/sda2']
+12:12:01,860 INFO    : Setting up swapspace version 1, size = 786428 KiB
+12:12:01,860 INFO    : no label, UUID=b6a11888-75c1-4a5f-98fa-32c323404e4e
+12:12:01,862 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,888 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:01,933 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:02,013 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:02,090 INFO    : Running... ['mke2fs', '-t', 'ext4', '/dev/sda3']
+12:12:02,099 INFO    : Filesystem label=
+12:12:02,102 INFO    : OS type: Linux
+12:12:02,102 INFO    : Block size=4096 (log=2)
+12:12:02,102 INFO    : Fragment size=4096 (log=2)
+12:12:02,103 INFO    : Stride=0 blocks, Stripe width=0 blocks
+12:12:02,103 INFO    : 593344 inodes, 2373376 blocks
+12:12:02,103 INFO    : 118668 blocks (5.00%) reserved for the super user
+12:12:02,103 INFO    : First data block=0
+12:12:02,103 INFO    : Maximum filesystem blocks=2432696320
+12:12:02,104 INFO    : 73 block groups
+12:12:02,104 INFO    : 32768 blocks per group, 32768 fragments per group
+12:12:02,104 INFO    : 8128 inodes per group
+12:12:02,104 INFO    : Superblock backups stored on blocks: 
+12:12:02,105 INFO    : 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+12:12:02,105 INFO    : 
+12:12:03,051 INFO    : Writing inode tables:  0/73 1/73 2/73 3/73 4/73 5/73 6/73 7/73 8/73 9/7310/7311/7312/7313/7314/7315/7316/7317/7318/7319/7320/7321/7322/7323/7324/7325/7326/7327/7328/7329/7330/7331/7332/7333/7334/7335/7336/7337/7338/7339/7340/7341/7342/7343/7344/7345/7346/7347/7348/7349/7350/7351/7352/7353/7354/7355/7356/7357/7358/7359/7360/7361/7362/7363/7364/7365/7366/7367/7368/7369/7370/7371/7372/73done                            
+12:12:03,703 INFO    : Creating journal (32768 blocks): done
+12:12:03,938 INFO    : Writing superblocks and filesystem accounting information: done
+12:12:03,938 INFO    : 
+12:12:03,939 INFO    : This filesystem will be automatically checked every 26 mounts or
+12:12:03,940 INFO    : 180 days, whichever comes first.  Use tune2fs -c or -i to override.
+12:12:03,972 ERROR   : mke2fs 1.41.12 (17-May-2010)
+12:12:03,983 INFO    : Running... ['tune2fs', '-c0', '-i0', '-ouser_xattr,acl', '/dev/sda3']
+12:12:04,009 INFO    : tune2fs 1.41.12 (17-May-2010)
+12:12:04,009 INFO    : Setting maximal mount count to -1
+12:12:04,009 INFO    : Setting interval between checks to 0 seconds
+12:12:04,010 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:04,037 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+12:12:04,099 INFO    : Running... ['swapon', '/dev/sda2']
+Running... /bin/mount -n -t ext4 -o defaults /dev/sda3 /mnt/sysimage
+Running... /bin/mount -n -t ext4 -o defaults /dev/sda1 /mnt/sysimage/boot
+Running... /bin/mount -n -t bind -o defaults,bind //dev /mnt/sysimage/dev
+Running... /bin/mount -n -t devpts -o gid=5,mode=620 /dev/devpts /mnt/sysimage/dev/pts
+Running... /bin/mount -n -t tmpfs -o defaults /dev/tmpfs /mnt/sysimage/dev/shm
+Running... /bin/mount -n -t proc -o defaults /dev/proc /mnt/sysimage/proc
+Running... /bin/mount -n -t sysfs -o defaults /dev/sysfs /mnt/sysimage/sys
+12:12:04,209 INFO    : Running... ['/usr/sbin/dmidecode', 'dmidecode', '-s', 'system-manufacturer']
+12:12:04,215 INFO    : VMware, Inc.
+12:14:33,333 INFO    : Running... ['udevadm', 'settle', '--timeout=300']
+Running... /bin/mount -n -t iso9660 -o ro /dev/sr0 /mnt/source
+12:19:46,865 INFO    : Running... ['modinfo', '-F', 'filename', 'xfs']
+12:19:46,886 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/xfs/xfs.ko.gz
+12:19:46,886 INFO    : Running... ['modinfo', '-F', 'filename', 'exportfs']
+12:19:46,895 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/exportfs/exportfs.ko.gz
+12:19:46,896 INFO    : Running... ['modinfo', '-F', 'filename', 'vfat']
+12:19:46,904 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/fat/vfat.ko.gz
+12:19:46,905 INFO    : Running... ['modinfo', '-F', 'filename', 'fat']
+12:19:46,915 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/fat/fat.ko.gz
+12:19:46,916 INFO    : Running... ['modinfo', '-F', 'filename', 'ext3']
+12:19:46,929 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext3/ext3.ko.gz
+12:19:46,929 INFO    : Running... ['modinfo', '-F', 'filename', 'jbd']
+12:19:46,936 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/jbd/jbd.ko.gz
+12:19:46,937 INFO    : Running... ['modinfo', '-F', 'filename', 'ext2']
+12:19:46,948 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext2/ext2.ko.gz
+12:19:46,949 INFO    : Running... ['modinfo', '-F', 'filename', 'ext4']
+12:19:46,961 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext4/ext4.ko.gz
+12:19:46,961 INFO    : Running... ['modinfo', '-F', 'filename', 'jbd2']
+12:19:46,969 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/jbd2/jbd2.ko.gz
+12:19:46,969 INFO    : Running... ['modinfo', '-F', 'filename', 'mbcache']
+12:19:46,978 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/mbcache.ko.gz
+12:19:46,978 INFO    : Running... ['modinfo', '-F', 'filename', 'fcoe']
+12:19:46,990 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/fcoe/fcoe.ko.gz
+12:19:46,990 INFO    : Running... ['modinfo', '-F', 'filename', 'libfcoe']
+12:19:46,999 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/fcoe/libfcoe.ko.gz
+12:19:46,999 INFO    : Running... ['modinfo', '-F', 'filename', 'libfc']
+12:19:47,009 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libfc/libfc.ko.gz
+12:19:47,009 INFO    : Running... ['modinfo', '-F', 'filename', 'scsi_transport_fc']
+12:19:47,016 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_fc.ko.gz
+12:19:47,017 INFO    : Running... ['modinfo', '-F', 'filename', 'scsi_tgt']
+12:19:47,026 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_tgt.ko.gz
+12:19:47,026 INFO    : Running... ['modinfo', '-F', 'filename', 'xts']
+12:19:47,035 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/xts.ko.gz
+12:19:47,035 INFO    : Running... ['modinfo', '-F', 'filename', 'lrw']
+12:19:47,042 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/lrw.ko.gz
+12:19:47,042 INFO    : Running... ['modinfo', '-F', 'filename', 'gf128mul']
+12:19:47,049 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/gf128mul.ko.gz
+12:19:47,049 INFO    : Running... ['modinfo', '-F', 'filename', 'cbc']
+12:19:47,061 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/cbc.ko.gz
+12:19:47,061 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_raid']
+12:19:47,069 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-raid.ko.gz
+12:19:47,070 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_crypt']
+12:19:47,079 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-crypt.ko.gz
+12:19:47,080 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_round_robin']
+12:19:47,090 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-round-robin.ko.gz
+12:19:47,092 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_multipath']
+12:19:47,102 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-multipath.ko.gz
+12:19:47,103 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_thin_pool']
+12:19:47,115 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-thin-pool.ko.gz
+12:19:47,116 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_bio_prison']
+12:19:47,125 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-bio-prison.ko.gz
+12:19:47,125 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_persistent_data']
+12:19:47,133 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/persistent-data/dm-persistent-data.ko.gz
+12:19:47,134 INFO    : Running... ['modinfo', '-F', 'filename', 'libcrc32c']
+12:19:47,144 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/libcrc32c.ko.gz
+12:19:47,144 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_snapshot']
+12:19:47,151 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-snapshot.ko.gz
+12:19:47,151 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_bufio']
+12:19:47,160 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-bufio.ko.gz
+12:19:47,160 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_mirror']
+12:19:47,167 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-mirror.ko.gz
+12:19:47,167 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_region_hash']
+12:19:47,176 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-region-hash.ko.gz
+12:19:47,176 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_log']
+12:19:47,184 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-log.ko.gz
+12:19:47,184 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_zero']
+12:19:47,193 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-zero.ko.gz
+12:19:47,193 INFO    : Running... ['modinfo', '-F', 'filename', 'dm_mod']
+12:19:47,201 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-mod.ko.gz
+12:19:47,201 INFO    : Running... ['modinfo', '-F', 'filename', 'linear']
+12:19:47,210 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/linear.ko.gz
+12:19:47,211 INFO    : Running... ['modinfo', '-F', 'filename', 'raid10']
+12:19:47,219 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid10.ko.gz
+12:19:47,219 INFO    : Running... ['modinfo', '-F', 'filename', 'raid456']
+12:19:47,229 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid456.ko.gz
+12:19:47,229 INFO    : Running... ['modinfo', '-F', 'filename', 'async_raid6_recov']
+12:19:47,238 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_raid6_recov.ko.gz
+12:19:47,238 INFO    : Running... ['modinfo', '-F', 'filename', 'async_pq']
+12:19:47,246 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_pq.ko.gz
+12:19:47,246 INFO    : Running... ['modinfo', '-F', 'filename', 'raid6_pq']
+12:19:47,261 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/raid6/raid6_pq.ko.gz
+12:19:47,261 INFO    : Running... ['modinfo', '-F', 'filename', 'async_xor']
+12:19:47,271 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_xor.ko.gz
+12:19:47,272 INFO    : Running... ['modinfo', '-F', 'filename', 'xor']
+12:19:47,284 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/xor.ko.gz
+12:19:47,284 INFO    : Running... ['modinfo', '-F', 'filename', 'async_memcpy']
+12:19:47,294 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_memcpy.ko.gz
+12:19:47,294 INFO    : Running... ['modinfo', '-F', 'filename', 'async_tx']
+12:19:47,305 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_tx.ko.gz
+12:19:47,306 INFO    : Running... ['modinfo', '-F', 'filename', 'raid1']
+12:19:47,316 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid1.ko.gz
+12:19:47,316 INFO    : Running... ['modinfo', '-F', 'filename', 'raid0']
+12:19:47,327 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid0.ko.gz
+12:19:47,327 INFO    : Running... ['modinfo', '-F', 'filename', '8021q']
+12:19:47,338 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/net/8021q/8021q.ko.gz
+12:19:47,340 INFO    : Running... ['modinfo', '-F', 'filename', 'garp']
+12:19:47,350 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/net/802/garp.ko.gz
+12:19:47,351 INFO    : Running... ['modinfo', '-F', 'filename', 'stp']
+12:19:47,358 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/net/802/stp.ko.gz
+12:19:47,358 INFO    : Running... ['modinfo', '-F', 'filename', 'llc']
+12:19:47,366 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/net/llc/llc.ko.gz
+12:19:47,366 INFO    : Running... ['modinfo', '-F', 'filename', 'mlx4_ib']
+12:19:47,374 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/hw/mlx4/mlx4_ib.ko.gz
+12:19:47,375 INFO    : Running... ['modinfo', '-F', 'filename', 'mlx4_en']
+12:19:47,381 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/mlx4/mlx4_en.ko.gz
+12:19:47,382 INFO    : Running... ['modinfo', '-F', 'filename', 'ptp']
+12:19:47,390 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ptp/ptp.ko.gz
+12:19:47,391 INFO    : Running... ['modinfo', '-F', 'filename', 'pps_core']
+12:19:47,397 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/pps/pps_core.ko.gz
+12:19:47,397 INFO    : Running... ['modinfo', '-F', 'filename', 'mlx4_core']
+12:19:47,406 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/mlx4/mlx4_core.ko.gz
+12:19:47,407 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_ipoib']
+12:19:47,414 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/ulp/ipoib/ib_ipoib.ko.gz
+12:19:47,414 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_cm']
+12:19:47,422 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_cm.ko.gz
+12:19:47,423 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_sa']
+12:19:47,430 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_sa.ko.gz
+12:19:47,430 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_mad']
+12:19:47,440 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_mad.ko.gz
+12:19:47,440 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_core']
+12:19:47,449 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_core.ko.gz
+12:19:47,449 INFO    : Running... ['modinfo', '-F', 'filename', 'ib_addr']
+12:19:47,458 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_addr.ko.gz
+12:19:47,458 INFO    : Running... ['modinfo', '-F', 'filename', 'sg']
+12:19:47,465 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sg.ko.gz
+12:19:47,466 INFO    : Running... ['modinfo', '-F', 'filename', 'sd_mod']
+12:19:47,478 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sd_mod.ko.gz
+12:19:47,479 INFO    : Running... ['modinfo', '-F', 'filename', 'crc_t10dif']
+12:19:47,487 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/crc-t10dif.ko.gz
+12:19:47,488 INFO    : Running... ['modinfo', '-F', 'filename', 'sr_mod']
+12:19:47,497 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sr_mod.ko.gz
+12:19:47,497 INFO    : Running... ['modinfo', '-F', 'filename', 'cdrom']
+12:19:47,507 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/cdrom/cdrom.ko.gz
+12:19:47,508 INFO    : Running... ['modinfo', '-F', 'filename', 'vmware_balloon']
+12:19:47,515 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/misc/vmware_balloon.ko.gz
+12:19:47,515 INFO    : Running... ['modinfo', '-F', 'filename', 'e1000']
+12:19:47,524 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/e1000/e1000.ko.gz
+12:19:47,525 INFO    : Running... ['modinfo', '-F', 'filename', 'vmwgfx']
+12:19:47,532 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/vmwgfx/vmwgfx.ko.gz
+12:19:47,533 INFO    : Running... ['modinfo', '-F', 'filename', 'ttm']
+12:19:47,543 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/ttm/ttm.ko.gz
+12:19:47,543 INFO    : Running... ['modinfo', '-F', 'filename', 'drm_kms_helper']
+12:19:47,552 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/drm_kms_helper.ko.gz
+12:19:47,553 INFO    : Running... ['modinfo', '-F', 'filename', 'drm']
+12:19:47,566 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/drm.ko.gz
+12:19:47,566 INFO    : Running... ['modinfo', '-F', 'filename', 'i2c_core']
+12:19:47,575 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/i2c/i2c-core.ko.gz
+12:19:47,575 INFO    : Running... ['modinfo', '-F', 'filename', 'mptspi']
+12:19:47,585 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptspi.ko.gz
+12:19:47,585 INFO    : Running... ['modinfo', '-F', 'filename', 'mptscsih']
+12:19:47,594 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptscsih.ko.gz
+12:19:47,595 INFO    : Running... ['modinfo', '-F', 'filename', 'mptbase']
+12:19:47,602 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptbase.ko.gz
+12:19:47,602 INFO    : Running... ['modinfo', '-F', 'filename', 'scsi_transport_spi']
+12:19:47,609 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_spi.ko.gz
+12:19:47,609 INFO    : Running... ['modinfo', '-F', 'filename', 'pata_acpi']
+12:19:47,615 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/pata_acpi.ko.gz
+12:19:47,615 INFO    : Running... ['modinfo', '-F', 'filename', 'ata_generic']
+12:19:47,623 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/ata_generic.ko.gz
+12:19:47,623 INFO    : Running... ['modinfo', '-F', 'filename', 'ata_piix']
+12:19:47,630 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/ata_piix.ko.gz
+12:19:47,630 INFO    : Running... ['modinfo', '-F', 'filename', 'ipv6']
+12:19:47,641 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/net/ipv6/ipv6.ko.gz
+12:19:47,641 INFO    : Running... ['modinfo', '-F', 'filename', 'iscsi_ibft']
+12:19:47,647 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/firmware/iscsi_ibft.ko.gz
+12:19:47,647 INFO    : Running... ['modinfo', '-F', 'filename', 'iscsi_boot_sysfs']
+12:19:47,653 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/iscsi_boot_sysfs.ko.gz
+12:19:47,654 INFO    : Running... ['modinfo', '-F', 'filename', 'pcspkr']
+12:19:47,661 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/input/misc/pcspkr.ko.gz
+12:19:47,662 INFO    : Running... ['modinfo', '-F', 'filename', 'edd']
+12:19:47,667 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/firmware/edd.ko.gz
+12:19:47,668 INFO    : Running... ['modinfo', '-F', 'filename', 'iscsi_tcp']
+12:19:47,676 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/iscsi_tcp.ko.gz
+12:19:47,676 INFO    : Running... ['modinfo', '-F', 'filename', 'libiscsi_tcp']
+12:19:47,683 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libiscsi_tcp.ko.gz
+12:19:47,683 INFO    : Running... ['modinfo', '-F', 'filename', 'libiscsi']
+12:19:47,691 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libiscsi.ko.gz
+12:19:47,691 INFO    : Running... ['modinfo', '-F', 'filename', 'scsi_transport_iscsi']
+12:19:47,697 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_iscsi.ko.gz
+12:19:47,698 INFO    : Running... ['modinfo', '-F', 'filename', 'squashfs']
+12:19:47,706 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/squashfs/squashfs.ko.gz
+12:19:47,706 INFO    : Running... ['modinfo', '-F', 'filename', 'cramfs']
+12:19:47,713 INFO    : /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/cramfs/cramfs.ko.gz
+Running... /bin/mount -n -t selinuxfs -o defaults /selinux /mnt/sysimage/selinux
+Running... /bin/mount -n -t usbfs -o defaults /proc/bus/usb /mnt/sysimage/proc/bus/usb
+Running... /bin/umount /mnt/stage2
+12:24:11,133 INFO    : Running... ['/usr/sbin/authconfig', '--update', '--nostart', '--enableshadow', '--passalgo=sha512', '--enablefingerprint']
+12:24:11,289 INFO    : Running... ['/usr/sbin/lokkit', '--quiet', '--nostart', '-f', '--service=ssh']
+12:24:11,322 INFO    : Running... ['/usr/sbin/lokkit', '--quiet', '--nostart', '--selinux=enforcing']
+12:24:11,990 INFO    : Running... ['/sbin/grub-install', '--just-copy']
+12:24:12,068 INFO    : Running... ['/sbin/grub', '--batch', '--no-floppy', '--device-map=/boot/grub/device.map']
+12:24:12,134 INFO    : 
+12:24:12,135 INFO    : 
+12:24:12,135 INFO    :     GNU GRUB  version 0.97  (640K lower / 3072K upper memory)
+12:24:12,135 INFO    : 
+12:24:12,135 INFO    :  [ Minimal BASH-like line editing is supported.  For the first word, TAB
+12:24:12,135 INFO    :    lists possible command completions.  Anywhere else TAB lists the possible
+12:24:12,135 INFO    :    completions of a device/filename.]
+12:24:12,135 INFO    : grub> root (hd0,0)
+12:24:12,135 INFO    :  Filesystem type is ext2fs, partition type 0x83
+12:24:12,135 INFO    : grub> install --stage2=/boot/grub/stage2 /grub/stage1 d (hd0) /grub/stage2 p (hd0,0)/grub/grub.conf
+12:24:12,136 INFO    : grub> 

@@ -1,0 +1,86 @@
+10:58:41,601 DEBUG   : Network.update() called
+10:58:41,605 DEBUG   : /etc/sysconfig/network-scripts/ifcfg-eth0:
+DEVICE=eth0
+HWADDR=00:0C:29:46:26:0C
+TYPE=Ethernet
+UUID=36227cea-7fc3-4199-b2b0-d0697d9c2eba
+ONBOOT=no
+NM_CONTROLLED=yes
+BOOTPROTO=dhcp
+
+10:58:41,606 DEBUG   : NetworkDevice eth0:
+
+10:58:41,606 DEBUG   : loadIfcfgFile eth0 from /etc/sysconfig/network-scripts/ifcfg-eth0
+10:58:41,606 DEBUG   : NetworkDevice eth0:
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+HWADDR="00:0C:29:46:26:0C"
+NM_CONTROLLED="yes"
+ONBOOT="no"
+TYPE="Ethernet"
+UUID="36227cea-7fc3-4199-b2b0-d0697d9c2eba"
+
+10:58:41,614 DEBUG   : NetworkDevice eth0 set: NM_CONTROLLED=yes
+10:58:41,627 DEBUG   : Network.update() called
+10:58:41,630 DEBUG   : /etc/sysconfig/network-scripts/ifcfg-eth0:
+DEVICE=eth0
+HWADDR=00:0C:29:46:26:0C
+TYPE=Ethernet
+UUID=36227cea-7fc3-4199-b2b0-d0697d9c2eba
+ONBOOT=no
+NM_CONTROLLED=yes
+BOOTPROTO=dhcp
+
+10:58:41,630 DEBUG   : NetworkDevice eth0:
+
+10:58:41,630 DEBUG   : loadIfcfgFile eth0 from /etc/sysconfig/network-scripts/ifcfg-eth0
+10:58:41,630 DEBUG   : NetworkDevice eth0:
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+HWADDR="00:0C:29:46:26:0C"
+NM_CONTROLLED="yes"
+ONBOOT="no"
+TYPE="Ethernet"
+UUID="36227cea-7fc3-4199-b2b0-d0697d9c2eba"
+
+10:58:41,635 DEBUG   : NetworkDevice eth0 set: NM_CONTROLLED=yes
+12:19:50,968 DEBUG   : Network.write() called
+12:19:50,969 DEBUG   : /etc/sysconfig/network-scripts/ifcfg-eth0:
+DEVICE=eth0
+HWADDR=00:0C:29:46:26:0C
+TYPE=Ethernet
+UUID=36227cea-7fc3-4199-b2b0-d0697d9c2eba
+ONBOOT=no
+NM_CONTROLLED=yes
+BOOTPROTO=dhcp
+
+12:19:50,974 DEBUG   : NetworkDevice eth0:
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+HWADDR="00:0C:29:46:26:0C"
+NM_CONTROLLED="yes"
+ONBOOT="no"
+TYPE="Ethernet"
+UUID="36227cea-7fc3-4199-b2b0-d0697d9c2eba"
+
+12:19:50,974 DEBUG   : writeIfcfgFile eth0 to /etc/sysconfig/network-scripts/ifcfg-eth0 not needed
+12:24:11,287 DEBUG   : Network.write() called
+12:24:11,287 DEBUG   : /etc/sysconfig/network-scripts/ifcfg-eth0:
+DEVICE=eth0
+HWADDR=00:0C:29:46:26:0C
+TYPE=Ethernet
+UUID=36227cea-7fc3-4199-b2b0-d0697d9c2eba
+ONBOOT=no
+NM_CONTROLLED=yes
+BOOTPROTO=dhcp
+
+12:24:11,287 DEBUG   : NetworkDevice eth0:
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+HWADDR="00:0C:29:46:26:0C"
+NM_CONTROLLED="yes"
+ONBOOT="no"
+TYPE="Ethernet"
+UUID="36227cea-7fc3-4199-b2b0-d0697d9c2eba"
+
+12:24:11,288 DEBUG   : writeIfcfgFile eth0 to /etc/sysconfig/network-scripts/ifcfg-eth0 not needed

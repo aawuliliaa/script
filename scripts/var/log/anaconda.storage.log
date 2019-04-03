@@ -1,0 +1,2147 @@
+10:58:39,017 DEBUG   : registered device format class DiskLabel as disklabel
+10:58:39,018 DEBUG   : registered device format class DMRaidMember as dmraidmember
+10:58:39,105 DEBUG   : registered device format class Ext2FS as ext2
+10:58:39,105 DEBUG   : registered device format class Ext3FS as ext3
+10:58:39,105 DEBUG   : registered device format class Ext4FS as ext4
+10:58:39,106 DEBUG   : registered device format class FATFS as vfat
+10:58:39,107 DEBUG   : registered device format class EFIFS as efi
+10:58:39,107 DEBUG   : registered device format class BTRFS as btrfs
+10:58:39,107 DEBUG   : registered device format class GFS2 as gfs2
+10:58:39,107 DEBUG   : registered device format class JFS as jfs
+10:58:39,107 DEBUG   : registered device format class ReiserFS as reiserfs
+10:58:39,107 DEBUG   : registered device format class XFS as xfs
+10:58:39,107 DEBUG   : registered device format class HFS as hfs
+10:58:39,107 DEBUG   : registered device format class AppleBootstrapFS as appleboot
+10:58:39,108 DEBUG   : registered device format class HFSPlus as hfs+
+10:58:39,108 DEBUG   : registered device format class NTFS as ntfs
+10:58:39,108 DEBUG   : registered device format class NFS as nfs
+10:58:39,108 DEBUG   : registered device format class NFSv4 as nfs4
+10:58:39,109 DEBUG   : registered device format class Iso9660FS as iso9660
+10:58:39,109 DEBUG   : registered device format class NoDevFS as nodev
+10:58:39,109 DEBUG   : registered device format class DevPtsFS as devpts
+10:58:39,109 DEBUG   : registered device format class ProcFS as proc
+10:58:39,109 DEBUG   : registered device format class SysFS as sysfs
+10:58:39,110 DEBUG   : registered device format class TmpFS as tmpfs
+10:58:39,110 DEBUG   : registered device format class BindFS as bind
+10:58:39,135 DEBUG   : registered device format class LUKS as luks
+10:58:39,136 DEBUG   : registered device format class LVMPhysicalVolume as lvmpv
+10:58:39,138 DEBUG   : registered device format class MDRaidMember as mdmember
+10:58:39,139 DEBUG   : registered device format class MultipathMember as multipath_member
+10:58:39,140 DEBUG   : registered device format class PPCPRePBoot as prepboot
+10:58:39,144 DEBUG   : registered device format class SwapSpace as swap
+11:09:01,751 DEBUG   : DeviceTree.populate: ignoredDisks is [] ; exclusiveDisks is []
+11:09:01,784 INFO    : devices to scan for multipath: ['sr0', 'sda']
+11:09:01,784 DEBUG   : /etc/multipath.conf contents:
+11:09:01,784 DEBUG   : # multipath.conf written by anaconda
+11:09:01,784 DEBUG   : 
+11:09:01,784 DEBUG   : defaults {
+11:09:01,784 DEBUG   : 	user_friendly_names yes
+11:09:01,784 DEBUG   : }
+11:09:01,784 DEBUG   : blacklist {
+11:09:01,784 DEBUG   : 	devnode "^(ram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
+11:09:01,784 DEBUG   : 	devnode "^hd[a-z]"
+11:09:01,785 DEBUG   : 	devnode "^dcssblk[0-9]*"
+11:09:01,785 DEBUG   : 	device {
+11:09:01,785 DEBUG   : 		vendor "DGC"
+11:09:01,785 DEBUG   : 		product "LUNZ"
+11:09:01,785 DEBUG   : 	}
+11:09:01,785 DEBUG   : 	device {
+11:09:01,785 DEBUG   : 		vendor "IBM"
+11:09:01,785 DEBUG   : 		product "S/390.*"
+11:09:01,785 DEBUG   : 	}
+11:09:01,785 DEBUG   : 	# don't count normal SATA devices as multipaths
+11:09:01,785 DEBUG   : 	device {
+11:09:01,785 DEBUG   : 		vendor  "ATA"
+11:09:01,785 DEBUG   : 	}
+11:09:01,785 DEBUG   : 	# don't count 3ware devices as multipaths
+11:09:01,785 DEBUG   : 	device {
+11:09:01,785 DEBUG   : 		vendor  "3ware"
+11:09:01,786 DEBUG   : 	}
+11:09:01,786 DEBUG   : 	device {
+11:09:01,786 DEBUG   : 		vendor  "AMCC"
+11:09:01,786 DEBUG   : 	}
+11:09:01,786 DEBUG   : 	# nor highpoint devices
+11:09:01,786 DEBUG   : 	device {
+11:09:01,786 DEBUG   : 		vendor  "HPT"
+11:09:01,786 DEBUG   : 	}
+11:09:01,786 DEBUG   : }
+11:09:01,786 DEBUG   : multipaths {
+11:09:01,786 DEBUG   : }
+11:09:01,787 DEBUG   : (end of /etc/multipath.conf)
+11:09:01,807 INFO    : adding sr0 to non_disk_device list
+11:09:01,808 INFO    : adding sda to singlepath_disks
+11:09:01,808 INFO    : devices post multipath scan: (['sda'], [], ['sr0'])
+11:09:01,808 INFO    : devices to scan: ['sda', 'sr0']
+11:09:01,858 DEBUG   :             DeviceTree.addUdevDevice: info: {'ID_REVISION': '1.0', 'LVM_SBIN_PATH': '/usr/sbin', 'ID_VENDOR_ENC': 'VMware\\x2c\\x20', 'ID_PATH': 'pci-0000:00:10.0-scsi-0:0:0:0', 'ID_VENDOR': 'VMware_', 'ANACBIN': '/usr/sbin', 'DEVTYPE': 'disk', 'MINOR': '0', 'MPATH_SBIN_PATH': '/usr/sbin', 'DEVLINKS': '/dev/block/8:0 /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0', 'SUBSYSTEM': 'block', 'ID_MODEL': 'VMware_Virtual_S', 'sysfs_path': '/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda', 'ID_TYPE': 'disk', 'ID_BUS': 'scsi', 'symlinks': ['/dev/block/8:0', '/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0'], 'MAJOR': '8', 'name': 'sda', 'DEVPATH': '/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda', 'UDEV_LOG': '3', 'DEVNAME': 'sda', 'ID_MODEL_ENC': 'VMware\\x20Virtual\\x20S', 'ID_SCSI': '1'} ; name: sda ;
+11:09:01,859 DEBUG   : scanning sda (/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda)...
+11:09:01,859 DEBUG   : looking for device 'sda'...
+11:09:01,859 DEBUG   : found None
+11:09:01,860 DEBUG   :              DeviceTree.addUdevDiskDevice: name: sda ;
+11:09:01,860 DEBUG   : sda is a disk
+11:09:01,861 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:09:01,863 DEBUG   :                  DiskDevice._setFormat: sda ; current: None ; type: None ;
+11:09:01,863 DEBUG   : added disk sda (id 0) to device tree
+11:09:01,863 DEBUG   : looking up parted Device: /dev/sda
+11:09:01,869 DEBUG   :              DeviceTree.handleUdevDeviceFormat: name: sda ;
+11:09:01,870 DEBUG   :               DeviceTree.handleUdevDiskLabelFormat: device: sda ;
+11:09:01,870 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:09:01,872 DEBUG   :                DiskDevice.setup: sda ; status: True ; orig: False ;
+11:09:01,917 DEBUG   : required disklabel type for sda (1) is None
+11:09:01,918 DEBUG   : default disklabel type for sda is msdos
+11:09:01,918 DEBUG   : selecting msdos disklabel for sda based on size
+11:09:01,919 DEBUG   :                 DiskLabel.__init__: device: /dev/sda ; labelType: msdos ; exists: True ;
+11:09:16,855 DEBUG   :                 DiskLabel.__init__: device: /dev/sda ; labelType: msdos ; exists: False ;
+11:09:16,856 DEBUG   :                   DiskLabel.freshPartedDisk: device: /dev/sda ; labelType: msdos ;
+11:09:16,857 DEBUG   : getFormat('disklabel') returning DiskLabel instance
+11:09:16,858 DEBUG   :                 DeviceFormat.teardown: device: /dev/sda ; status: False ; type: None ;
+11:09:16,858 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:09:16,858 DEBUG   :                  DiskDevice._setFormat: sda ; current: None ; type: None ;
+11:09:16,859 DEBUG   : registered action: Destroy Format None on disk sda (id 0)
+11:09:16,860 DEBUG   :                 DeviceFormat.teardown: device: /dev/sda ; status: False ; type: None ;
+11:09:16,861 DEBUG   :                  DiskDevice._setFormat: sda ; current: None ; type: disklabel ;
+11:09:16,861 DEBUG   : registered action: Create Format disklabel on disk sda (id 0)
+11:09:16,861 DEBUG   : got device: DiskDevice instance (0x7f735a9f72d0) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 0
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a94ec90>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9c2190>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DeviceFormat instance (0x7f735a9f7250) --
+  type = None  name = Unknown  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = False  resizable = False
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9c2190>
+11:09:16,862 DEBUG   : got format: DiskLabel instance (0x7f735a94ec90) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a9c2290>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a94ed90>
+  partedDevice = <parted.device.Device object at 0x7f735a9c2490>
+
+11:09:16,901 DEBUG   :             DeviceTree.addUdevDevice: info: {'ID_PART_TABLE_TYPE': 'dos', 'ID_REVISION': '00000001', 'LVM_SBIN_PATH': '/usr/sbin', 'ID_PATH': 'pci-0000:00:07.1-scsi-1:0:0:0', 'ANACBIN': '/usr/sbin', 'ID_MODEL_ENC': 'VMware\\x20Virtual\\x20IDE\\x20CDROM\\x20Drive\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20', 'ID_ATA_FEATURE_SET_PM_ENABLED': '1', 'ID_FS_LABEL_ENC': 'CentOS_6.9_Final', 'ID_SERIAL': 'VMware_Virtual_IDE_CDROM_Drive_10000000000000000001', 'ID_CDROM_MEDIA_DVD': '1', 'ID_CDROM_MEDIA': '1', 'ID_CDROM_MEDIA_STATE': 'complete', 'DEVTYPE': 'disk', 'ID_BUS': 'ata', 'MPATH_SBIN_PATH': '/usr/sbin', 'ID_FS_TYPE': 'iso9660', 'DEVLINKS': '/dev/block/11:0 /dev/scd0 /dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001 /dev/disk/by-path/pci-0000:00:07.1-scsi-1:0:0:0 /dev/disk/by-label/CentOS_6.9_Final /dev/cdrom /dev/cdrw /dev/dvd /dev/dvdrw', 'SUBSYSTEM': 'block', 'ID_CDROM_MEDIA_SESSION_COUNT': '1', 'ID_ATA': '1', 'ID_CDROM_DVD_R': '1', 'ID_CDROM': '1', 'ID_MODEL': 'VMware_Virtual_IDE_CDROM_Drive', 'ID_SERIAL_SHORT': '10000000000000000001', 'ID_CDROM_MEDIA_TRACK_COUNT_DATA': '1', 'ID_CDROM_CD_RW': '1', 'ID_CDROM_MRW': '1', 'ID_FS_LABEL': 'CentOS_6.9_Final', 'ID_FS_USAGE': 'filesystem', 'ID_CDROM_CD_R': '1', 'ID_CDROM_MRW_W': '1', 'MINOR': '0', 'symlinks': ['/dev/block/11:0', '/dev/scd0', '/dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001', '/dev/disk/by-path/pci-0000:00:07.1-scsi-1:0:0:0', '/dev/disk/by-label/CentOS_6.9_Final', '/dev/cdrom', '/dev/cdrw', '/dev/dvd', '/dev/dvdrw'], 'MAJOR': '11', 'name': 'sr0', 'DEVPATH': '/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0', 'ID_CDROM_DVD': '1', 'UDEV_LOG': '3', 'DEVNAME': 'sr0', 'sysfs_path': '/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0', 'GENERATED': '1', 'ID_CDROM_MEDIA_TRACK_COUNT': '1', 'ID_ATA_FEATURE_SET_PM': '1', 'ACL_MANAGE': '1', 'ID_CDROM_DVD_RAM': '1', 'ID_TYPE': 'cd'} ; name: sr0 ;
+11:09:16,901 DEBUG   : scanning sr0 (/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0)...
+11:09:16,901 DEBUG   : looking for device 'sr0'...
+11:09:16,902 DEBUG   : found None
+11:09:16,902 DEBUG   : sr0 is a cdrom
+11:09:16,902 DEBUG   :              DeviceTree.addUdevOpticalDevice:
+11:09:16,902 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:09:16,905 DEBUG   :                  OpticalDevice._setFormat: sr0 ; current: None ; type: None ;
+11:09:16,905 DEBUG   : added cdrom sr0 (id 1) to device tree
+11:09:16,906 DEBUG   :              OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:09:16,910 DEBUG   :              DeviceTree.handleUdevDeviceFormat: name: sr0 ;
+11:09:16,911 DEBUG   :               DeviceTree.handleUdevDiskLabelFormat: device: sr0 ;
+11:09:16,912 DEBUG   :                  Iso9660FS.supported: supported: True ;
+11:09:16,912 DEBUG   : getFormat('iso9660') returning Iso9660FS instance
+11:09:16,912 DEBUG   : device sr0 does not contain a disklabel
+11:09:16,912 DEBUG   : type detected on 'sr0' is 'iso9660'
+11:09:16,913 DEBUG   :                 Iso9660FS.supported: supported: True ;
+11:09:16,914 DEBUG   :                 Iso9660FS.supported: supported: True ;
+11:09:16,914 DEBUG   : getFormat('iso9660') returning Iso9660FS instance
+11:09:16,915 DEBUG   :                OpticalDevice._setFormat: sr0 ; current: None ; type: iso9660 ;
+11:09:16,915 DEBUG   :                 OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:09:16,918 DEBUG   : looking up parted Device: /dev/sr0
+11:09:16,926 DEBUG   : got device: OpticalDevice instance (0x7f735a94ec10) --
+  name = sr0  status = True  parents = []
+  kids = 0
+  id = 1
+  uuid = None  format = <storage.formats.fs.Iso9660FS object at 0x7f735a977710>  size = 3788.0
+  major = 11  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0  partedDevice = <parted.device.Device object at 0x7f735a977890>
+  target size = 0  path = /dev/sr0
+  format args = []  originalFormat = DeviceFormat instance (0x7f735a94ebd0) --
+  type = None  name = Unknown  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = None  supported = False  formattable = False  resizable = False
+
+11:09:16,928 DEBUG   :                Iso9660FS.supported: supported: True ;
+11:09:16,928 DEBUG   : got format: Iso9660FS instance (0x7f735a977710) --
+  type = iso9660  name = iso9660  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = ro  supported = True  formattable = False  resizable = False
+  mountpoint = None  mountopts = None
+  label = CentOS_6.9_Final  size = 0  targetSize = 0
+
+11:09:16,959 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+11:09:16,984 DEBUG   :              OpticalDevice.teardown: sr0 ; status: True ;
+11:09:17,003 INFO    : failed to unlink /etc/mdadm.conf
+11:09:17,004 INFO    : edd: MBR signature on sda is zero. new disk image?
+11:09:17,004 INFO    : edd: collected mbr signatures: {}
+11:09:17,004 DEBUG   : edd: data extracted from 0x80:
+	type: None, ata_device: None
+	channel: None, mbr_signature: None
+	pci_dev: None, scsi_id: None
+	scsi_lun: None, sectors: 20971520
+11:09:17,004 ERROR   : edd: unable to match edd entry 0x80
+11:09:17,041 DEBUG   :                OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:09:17,049 DEBUG   :                Iso9660FS.supported: supported: True ;
+11:17:34,825 DEBUG   : DeviceTree.populate: ignoredDisks is [] ; exclusiveDisks is []
+11:17:34,864 INFO    : devices to scan for multipath: ['sr0', 'sda']
+11:17:34,864 DEBUG   : /etc/multipath.conf contents:
+11:17:34,865 DEBUG   : # multipath.conf written by anaconda
+11:17:34,865 DEBUG   : 
+11:17:34,865 DEBUG   : defaults {
+11:17:34,865 DEBUG   : 	user_friendly_names yes
+11:17:34,865 DEBUG   : }
+11:17:34,865 DEBUG   : blacklist {
+11:17:34,865 DEBUG   : 	devnode "^(ram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
+11:17:34,865 DEBUG   : 	devnode "^hd[a-z]"
+11:17:34,865 DEBUG   : 	devnode "^dcssblk[0-9]*"
+11:17:34,865 DEBUG   : 	device {
+11:17:34,865 DEBUG   : 		vendor "DGC"
+11:17:34,865 DEBUG   : 		product "LUNZ"
+11:17:34,865 DEBUG   : 	}
+11:17:34,865 DEBUG   : 	device {
+11:17:34,865 DEBUG   : 		vendor "IBM"
+11:17:34,866 DEBUG   : 		product "S/390.*"
+11:17:34,866 DEBUG   : 	}
+11:17:34,866 DEBUG   : 	# don't count normal SATA devices as multipaths
+11:17:34,866 DEBUG   : 	device {
+11:17:34,866 DEBUG   : 		vendor  "ATA"
+11:17:34,866 DEBUG   : 	}
+11:17:34,866 DEBUG   : 	# don't count 3ware devices as multipaths
+11:17:34,866 DEBUG   : 	device {
+11:17:34,866 DEBUG   : 		vendor  "3ware"
+11:17:34,866 DEBUG   : 	}
+11:17:34,866 DEBUG   : 	device {
+11:17:34,866 DEBUG   : 		vendor  "AMCC"
+11:17:34,866 DEBUG   : 	}
+11:17:34,866 DEBUG   : 	# nor highpoint devices
+11:17:34,866 DEBUG   : 	device {
+11:17:34,866 DEBUG   : 		vendor  "HPT"
+11:17:34,866 DEBUG   : 	}
+11:17:34,866 DEBUG   : }
+11:17:34,867 DEBUG   : multipaths {
+11:17:34,867 DEBUG   : }
+11:17:34,867 DEBUG   : (end of /etc/multipath.conf)
+11:17:34,884 INFO    : adding sr0 to non_disk_device list
+11:17:34,884 INFO    : adding sda to singlepath_disks
+11:17:34,884 INFO    : devices post multipath scan: (['sda'], [], ['sr0'])
+11:17:34,884 INFO    : devices to scan: ['sda', 'sr0']
+11:17:34,890 DEBUG   :          DeviceTree.addUdevDevice: info: {'ID_REVISION': '1.0', 'LVM_SBIN_PATH': '/usr/sbin', 'ID_VENDOR_ENC': 'VMware\\x2c\\x20', 'ID_PATH': 'pci-0000:00:10.0-scsi-0:0:0:0', 'ID_VENDOR': 'VMware_', 'ANACBIN': '/usr/sbin', 'DEVTYPE': 'disk', 'MINOR': '0', 'MPATH_SBIN_PATH': '/usr/sbin', 'DEVLINKS': '/dev/block/8:0 /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0', 'SUBSYSTEM': 'block', 'ID_MODEL': 'VMware_Virtual_S', 'sysfs_path': '/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda', 'ID_TYPE': 'disk', 'ID_BUS': 'scsi', 'symlinks': ['/dev/block/8:0', '/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0'], 'MAJOR': '8', 'name': 'sda', 'DEVPATH': '/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda', 'UDEV_LOG': '3', 'DEVNAME': 'sda', 'ID_MODEL_ENC': 'VMware\\x20Virtual\\x20S', 'ID_SCSI': '1'} ; name: sda ;
+11:17:34,890 DEBUG   : scanning sda (/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda)...
+11:17:34,891 DEBUG   : looking for device 'sda'...
+11:17:34,891 DEBUG   : found None
+11:17:34,891 DEBUG   :           DeviceTree.addUdevDiskDevice: name: sda ;
+11:17:34,892 DEBUG   : sda is a disk
+11:17:34,892 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:17:34,893 DEBUG   :               DiskDevice._setFormat: sda ; current: None ; type: None ;
+11:17:34,893 DEBUG   : added disk sda (id 2) to device tree
+11:17:34,893 DEBUG   : looking up parted Device: /dev/sda
+11:17:34,894 DEBUG   :           DeviceTree.handleUdevDeviceFormat: name: sda ;
+11:17:34,895 DEBUG   :            DeviceTree.handleUdevDiskLabelFormat: device: sda ;
+11:17:34,895 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:17:34,896 DEBUG   :             DiskDevice.setup: sda ; status: True ; orig: False ;
+11:17:34,927 DEBUG   : required disklabel type for sda (1) is None
+11:17:34,927 DEBUG   : default disklabel type for sda is msdos
+11:17:34,928 DEBUG   : selecting msdos disklabel for sda based on size
+11:17:34,929 DEBUG   :              DiskLabel.__init__: device: /dev/sda ; labelType: msdos ; exists: True ;
+11:17:34,932 DEBUG   :              DiskLabel.__init__: device: /dev/sda ; labelType: msdos ; exists: False ;
+11:17:34,933 DEBUG   :                DiskLabel.freshPartedDisk: device: /dev/sda ; labelType: msdos ;
+11:17:34,933 DEBUG   : getFormat('disklabel') returning DiskLabel instance
+11:17:34,935 DEBUG   :              DeviceFormat.teardown: device: /dev/sda ; status: False ; type: None ;
+11:17:34,935 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:17:34,937 DEBUG   :               DiskDevice._setFormat: sda ; current: None ; type: None ;
+11:17:34,937 DEBUG   : registered action: Destroy Format None on disk sda (id 2)
+11:17:34,941 DEBUG   :              DeviceFormat.teardown: device: /dev/sda ; status: False ; type: None ;
+11:17:34,942 DEBUG   :               DiskDevice._setFormat: sda ; current: None ; type: disklabel ;
+11:17:34,944 DEBUG   : registered action: Create Format disklabel on disk sda (id 2)
+11:17:34,945 DEBUG   : got device: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DeviceFormat instance (0x7f735a909510) --
+  type = None  name = Unknown  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = False  resizable = False
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+11:17:34,946 DEBUG   : got format: DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+
+11:17:34,950 DEBUG   :          DeviceTree.addUdevDevice: info: {'ID_PART_TABLE_TYPE': 'dos', 'ID_REVISION': '00000001', 'LVM_SBIN_PATH': '/usr/sbin', 'ID_PATH': 'pci-0000:00:07.1-scsi-1:0:0:0', 'ANACBIN': '/usr/sbin', 'ID_MODEL_ENC': 'VMware\\x20Virtual\\x20IDE\\x20CDROM\\x20Drive\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20', 'ID_ATA_FEATURE_SET_PM_ENABLED': '1', 'ID_FS_LABEL_ENC': 'CentOS_6.9_Final', 'ID_SERIAL': 'VMware_Virtual_IDE_CDROM_Drive_10000000000000000001', 'ID_CDROM_MEDIA_DVD': '1', 'ID_CDROM_MEDIA': '1', 'ID_CDROM_MEDIA_STATE': 'complete', 'DEVTYPE': 'disk', 'ID_BUS': 'ata', 'MPATH_SBIN_PATH': '/usr/sbin', 'ID_FS_TYPE': 'iso9660', 'DEVLINKS': '/dev/block/11:0 /dev/scd0 /dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001 /dev/disk/by-path/pci-0000:00:07.1-scsi-1:0:0:0 /dev/disk/by-label/CentOS_6.9_Final /dev/cdrom /dev/cdrw /dev/dvd /dev/dvdrw', 'SUBSYSTEM': 'block', 'ID_CDROM_MEDIA_SESSION_COUNT': '1', 'ID_ATA': '1', 'ID_CDROM_DVD_R': '1', 'ID_CDROM': '1', 'ID_MODEL': 'VMware_Virtual_IDE_CDROM_Drive', 'ID_SERIAL_SHORT': '10000000000000000001', 'ID_CDROM_MEDIA_TRACK_COUNT_DATA': '1', 'ID_CDROM_CD_RW': '1', 'ID_CDROM_MRW': '1', 'ID_FS_LABEL': 'CentOS_6.9_Final', 'ID_FS_USAGE': 'filesystem', 'ID_CDROM_CD_R': '1', 'ID_CDROM_MRW_W': '1', 'MINOR': '0', 'symlinks': ['/dev/block/11:0', '/dev/scd0', '/dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001', '/dev/disk/by-path/pci-0000:00:07.1-scsi-1:0:0:0', '/dev/disk/by-label/CentOS_6.9_Final', '/dev/cdrom', '/dev/cdrw', '/dev/dvd', '/dev/dvdrw'], 'MAJOR': '11', 'name': 'sr0', 'DEVPATH': '/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0', 'ID_CDROM_DVD': '1', 'UDEV_LOG': '3', 'DEVNAME': 'sr0', 'sysfs_path': '/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0', 'GENERATED': '1', 'ID_CDROM_MEDIA_TRACK_COUNT': '1', 'ID_ATA_FEATURE_SET_PM': '1', 'ACL_MANAGE': '1', 'ID_CDROM_DVD_RAM': '1', 'ID_TYPE': 'cd'} ; name: sr0 ;
+11:17:34,950 DEBUG   : scanning sr0 (/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0)...
+11:17:34,950 DEBUG   : looking for device 'sr0'...
+11:17:34,951 DEBUG   : found None
+11:17:34,951 DEBUG   : sr0 is a cdrom
+11:17:34,953 DEBUG   :           DeviceTree.addUdevOpticalDevice:
+11:17:34,953 DEBUG   : getFormat('None') returning DeviceFormat instance
+11:17:34,954 DEBUG   :               OpticalDevice._setFormat: sr0 ; current: None ; type: None ;
+11:17:34,954 DEBUG   : added cdrom sr0 (id 3) to device tree
+11:17:34,955 DEBUG   :           OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:17:34,959 DEBUG   :           DeviceTree.handleUdevDeviceFormat: name: sr0 ;
+11:17:34,961 DEBUG   :            DeviceTree.handleUdevDiskLabelFormat: device: sr0 ;
+11:17:34,963 DEBUG   :               Iso9660FS.supported: supported: True ;
+11:17:34,964 DEBUG   : getFormat('iso9660') returning Iso9660FS instance
+11:17:34,964 DEBUG   : device sr0 does not contain a disklabel
+11:17:34,964 DEBUG   : type detected on 'sr0' is 'iso9660'
+11:17:34,965 DEBUG   :              Iso9660FS.supported: supported: True ;
+11:17:34,966 DEBUG   :              Iso9660FS.supported: supported: True ;
+11:17:34,966 DEBUG   : getFormat('iso9660') returning Iso9660FS instance
+11:17:34,967 DEBUG   :             OpticalDevice._setFormat: sr0 ; current: None ; type: iso9660 ;
+11:17:34,968 DEBUG   :              OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:17:34,970 DEBUG   : looking up parted Device: /dev/sr0
+11:17:34,970 DEBUG   : got device: OpticalDevice instance (0x7f735a909fd0) --
+  name = sr0  status = True  parents = []
+  kids = 0
+  id = 3
+  uuid = None  format = <storage.formats.fs.Iso9660FS object at 0x7f735a909810>  size = 3788.0
+  major = 11  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0  partedDevice = <parted.device.Device object at 0x7f735a9098d0>
+  target size = 0  path = /dev/sr0
+  format args = []  originalFormat = DeviceFormat instance (0x7f735a914150) --
+  type = None  name = Unknown  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = None  supported = False  formattable = False  resizable = False
+
+11:17:34,972 DEBUG   :             Iso9660FS.supported: supported: True ;
+11:17:34,972 DEBUG   : got format: Iso9660FS instance (0x7f735a909810) --
+  type = iso9660  name = iso9660  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = ro  supported = True  formattable = False  resizable = False
+  mountpoint = None  mountopts = None
+  label = CentOS_6.9_Final  size = 0  targetSize = 0
+
+11:17:35,005 DEBUG   :           DiskDevice.teardown: sda ; status: True ;
+11:17:35,027 DEBUG   :           OpticalDevice.teardown: sr0 ; status: True ;
+11:17:35,053 INFO    : failed to unlink /etc/mdadm.conf
+11:17:35,053 INFO    : edd: MBR signature on sda is zero. new disk image?
+11:17:35,054 INFO    : edd: collected mbr signatures: {}
+11:17:35,054 DEBUG   : edd: data extracted from 0x80:
+	type: None, ata_device: None
+	channel: None, mbr_signature: None
+	pci_dev: None, scsi_id: None
+	scsi_lun: None, sectors: 20971520
+11:17:35,054 ERROR   : edd: unable to match edd entry 0x80
+11:17:35,058 DEBUG   :             OpticalDevice.mediaPresent: sr0 ; status: True ;
+11:17:35,062 DEBUG   :             Iso9660FS.supported: supported: True ;
+11:17:35,183 DEBUG   : looking for device 'sda-1'...
+11:17:35,183 DEBUG   : found None
+11:23:39,594 DEBUG   :         LVMPhysicalVolume.__init__:
+11:23:39,595 DEBUG   : getFormat('lvmpv') returning LVMPhysicalVolume instance
+11:23:39,596 DEBUG   :         MDRaidMember.__init__:
+11:23:39,596 DEBUG   : getFormat('software RAID') returning MDRaidMember instance
+11:23:42,654 DEBUG   :           Ext4FS.supported: supported: True ;
+11:23:42,711 DEBUG   : getFormat('ext4') returning Ext4FS instance
+11:23:42,712 DEBUG   :            PartitionDevice._setFormat: req0 ;
+11:23:42,713 DEBUG   :             PartitionDevice._setFormat: req0 ; current: None ; type: ext4 ;
+11:23:42,716 DEBUG   :           Ext4FS.supported: supported: True ;
+11:23:42,718 DEBUG   :            BindFS.supported: supported: False ;
+11:23:42,719 DEBUG   :           BindFS.supported: supported: False ;
+11:23:42,720 DEBUG   :             DevPtsFS.supported: supported: False ;
+11:23:42,721 DEBUG   :           DevPtsFS.supported: supported: False ;
+11:23:42,722 DEBUG   :           DiskLabel.__init__:
+11:23:42,723 INFO    : DiskLabel.partedDevice returning None
+11:23:42,723 DEBUG   :           DMRaidMember.__init__:
+11:23:42,724 DEBUG   :            Ext2FS.supported: supported: True ;
+11:23:42,740 DEBUG   :           Ext2FS.supported: supported: True ;
+11:23:42,742 DEBUG   :            Ext3FS.supported: supported: True ;
+11:23:42,778 DEBUG   :           Ext3FS.supported: supported: True ;
+11:23:42,780 DEBUG   :            Ext4FS.supported: supported: True ;
+11:23:42,781 DEBUG   :           Ext4FS.supported: supported: True ;
+11:23:42,783 DEBUG   :            HFS.supported: supported: False ;
+11:23:42,783 DEBUG   :           HFS.supported: supported: False ;
+11:23:42,784 DEBUG   :            HFSPlus.supported: supported: False ;
+11:23:42,785 DEBUG   :           HFSPlus.supported: supported: False ;
+11:23:42,786 DEBUG   :            Iso9660FS.supported: supported: True ;
+11:23:42,787 DEBUG   :           Iso9660FS.supported: supported: True ;
+11:23:42,787 DEBUG   :           LUKS.__init__:
+11:23:42,788 DEBUG   :           LVMPhysicalVolume.__init__:
+11:23:42,789 DEBUG   :           MDRaidMember.__init__:
+11:23:42,790 DEBUG   :           MultipathMember.__init__:
+11:23:42,790 DEBUG   :            NFS.supported: supported: False ;
+11:23:42,791 DEBUG   :           NFS.supported: supported: False ;
+11:23:42,792 DEBUG   :            NFSv4.supported: supported: False ;
+11:23:42,793 DEBUG   :           NFSv4.supported: supported: False ;
+11:23:42,794 DEBUG   :             NoDevFS.supported: supported: False ;
+11:23:42,794 DEBUG   :           NoDevFS.supported: supported: False ;
+11:23:42,795 DEBUG   :            NTFS.supported: supported: False ;
+11:23:42,795 DEBUG   :           NTFS.supported: supported: False ;
+11:23:42,796 DEBUG   :             ProcFS.supported: supported: False ;
+11:23:42,797 DEBUG   :           ProcFS.supported: supported: False ;
+11:23:42,797 DEBUG   :           SwapSpace.__init__:
+11:23:42,798 DEBUG   :             SysFS.supported: supported: False ;
+11:23:42,799 DEBUG   :           SysFS.supported: supported: False ;
+11:23:42,799 DEBUG   :             TmpFS.supported: supported: False ;
+11:23:42,800 DEBUG   :           TmpFS.supported: supported: False ;
+11:23:42,801 DEBUG   :            FATFS.supported: supported: True ;
+11:23:42,833 DEBUG   :           FATFS.supported: supported: True ;
+11:23:42,835 DEBUG   :            XFS.supported: supported: True ;
+11:23:42,923 DEBUG   :           XFS.supported: supported: True ;
+11:23:42,925 DEBUG   :            Ext4FS.supported: supported: True ;
+11:23:47,840 DEBUG   : looking for device 'sda-1'...
+11:23:47,840 DEBUG   : found None
+11:24:12,653 DEBUG   :         LVMPhysicalVolume.__init__:
+11:24:12,653 DEBUG   : getFormat('lvmpv') returning LVMPhysicalVolume instance
+11:24:12,654 DEBUG   :         MDRaidMember.__init__:
+11:24:12,654 DEBUG   : getFormat('software RAID') returning MDRaidMember instance
+11:24:49,630 DEBUG   :           Ext4FS.supported: supported: True ;
+11:24:49,630 DEBUG   : getFormat('ext4') returning Ext4FS instance
+11:24:49,631 DEBUG   :            PartitionDevice._setFormat: req1 ;
+11:24:49,632 DEBUG   :             PartitionDevice._setFormat: req1 ; current: None ; type: ext4 ;
+11:24:49,637 DEBUG   :           Ext4FS.supported: supported: True ;
+11:24:49,638 DEBUG   :            BindFS.supported: supported: False ;
+11:24:49,639 DEBUG   :           BindFS.supported: supported: False ;
+11:24:49,640 DEBUG   :             DevPtsFS.supported: supported: False ;
+11:24:49,640 DEBUG   :           DevPtsFS.supported: supported: False ;
+11:24:49,641 DEBUG   :           DiskLabel.__init__:
+11:24:49,641 INFO    : DiskLabel.partedDevice returning None
+11:24:49,641 DEBUG   :           DMRaidMember.__init__:
+11:24:49,642 DEBUG   :            Ext2FS.supported: supported: True ;
+11:24:49,643 DEBUG   :           Ext2FS.supported: supported: True ;
+11:24:49,644 DEBUG   :            Ext3FS.supported: supported: True ;
+11:24:49,646 DEBUG   :           Ext3FS.supported: supported: True ;
+11:24:49,647 DEBUG   :            Ext4FS.supported: supported: True ;
+11:24:49,649 DEBUG   :           Ext4FS.supported: supported: True ;
+11:24:49,650 DEBUG   :            HFS.supported: supported: False ;
+11:24:49,651 DEBUG   :           HFS.supported: supported: False ;
+11:24:49,652 DEBUG   :            HFSPlus.supported: supported: False ;
+11:24:49,653 DEBUG   :           HFSPlus.supported: supported: False ;
+11:24:49,654 DEBUG   :            Iso9660FS.supported: supported: True ;
+11:24:49,655 DEBUG   :           Iso9660FS.supported: supported: True ;
+11:24:49,656 DEBUG   :           LUKS.__init__:
+11:24:49,657 DEBUG   :           LVMPhysicalVolume.__init__:
+11:24:49,659 DEBUG   :           MDRaidMember.__init__:
+11:24:49,659 DEBUG   :           MultipathMember.__init__:
+11:24:49,660 DEBUG   :            NFS.supported: supported: False ;
+11:24:49,661 DEBUG   :           NFS.supported: supported: False ;
+11:24:49,661 DEBUG   :            NFSv4.supported: supported: False ;
+11:24:49,662 DEBUG   :           NFSv4.supported: supported: False ;
+11:24:49,663 DEBUG   :             NoDevFS.supported: supported: False ;
+11:24:49,663 DEBUG   :           NoDevFS.supported: supported: False ;
+11:24:49,664 DEBUG   :            NTFS.supported: supported: False ;
+11:24:49,665 DEBUG   :           NTFS.supported: supported: False ;
+11:24:49,666 DEBUG   :             ProcFS.supported: supported: False ;
+11:24:49,667 DEBUG   :           ProcFS.supported: supported: False ;
+11:24:49,669 DEBUG   :           SwapSpace.__init__:
+11:24:49,670 DEBUG   :             SysFS.supported: supported: False ;
+11:24:49,670 DEBUG   :           SysFS.supported: supported: False ;
+11:24:49,671 DEBUG   :             TmpFS.supported: supported: False ;
+11:24:49,672 DEBUG   :           TmpFS.supported: supported: False ;
+11:24:49,672 DEBUG   :            FATFS.supported: supported: True ;
+11:24:49,673 DEBUG   :           FATFS.supported: supported: True ;
+11:24:49,674 DEBUG   :            XFS.supported: supported: True ;
+11:24:49,674 DEBUG   :           XFS.supported: supported: True ;
+11:24:49,675 DEBUG   :            Ext4FS.supported: supported: True ;
+11:25:27,461 DEBUG   :           Ext4FS.supported: supported: True ;
+11:25:27,462 DEBUG   :              PartitionDevice._setFormat: req2 ;
+11:25:27,464 DEBUG   :               PartitionDevice._setFormat: req2 ; current: None ; type: ext4 ;
+11:25:27,465 DEBUG   :            PartitionDevice._setFormat: req2 ;
+11:25:27,466 DEBUG   :             PartitionDevice._setFormat: req2 ; current: ext4 ; type: ext4 ;
+11:25:27,466 DEBUG   : added partition req2 (id 6) to device tree
+11:25:27,466 DEBUG   : registered action: Create Device partition req2 (id 6)
+11:25:27,467 DEBUG   : registered action: Create Format ext4 on partition req2 (id 6)
+11:25:27,468 DEBUG   :           DiskDevice.setup: sda ; status: True ; orig: False ;
+11:25:27,469 DEBUG   : removing all non-preexisting partitions ['req2(id 6)'] from disk(s) ['sda']
+11:25:27,469 DEBUG   : allocatePartitions: disks=['sda'] ; partitions=['req2(id 6)']
+11:25:27,470 DEBUG   : removing all non-preexisting partitions ['req2(id 6)'] from disk(s) ['sda']
+11:25:27,470 DEBUG   : allocating partition: req2 ; id: 6 ; disks: ['sda'] ;
+boot: True ; primary: True ; size: 200MB ; grow: None ; max_size: 0
+11:25:27,470 DEBUG   : checking freespace on sda
+11:25:27,471 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=200MB boot=True best=None grow=None
+11:25:27,471 DEBUG   : current free range is 63-20971519 (10239MB)
+11:25:27,471 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:25:27,472 DEBUG   : new free: parted.Geometry instance --
+  start: 63  end: 20971519  length: 20971457
+  device: <parted.device.Device object at 0x7f7357374d10>  PedGeometry: <_ped.Geometry object at 0x7f7357374d50> (63-20971519 / 10239MB)
+11:25:27,472 DEBUG   : new free allows for 0 sectors of growth
+11:25:27,472 DEBUG   : found free space for bootable request
+11:25:27,472 DEBUG   : adjusted start sector from 63 to 2048
+11:25:27,472 DEBUG   : created partition sda1 of 200MB and added it to /dev/sda
+11:25:27,473 DEBUG   :             PartitionDevice._setPartedPartition: req2 ;
+11:25:27,473 DEBUG   : device req2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387290>  PedPartition: <_ped.Partition object at 0x7f735737afb0> has path /dev/sda1
+11:25:27,475 DEBUG   :             PartitionDevice._setDisk: sda1 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:25:27,475 DEBUG   :              DiskDevice.addChild: kids: 0 ; name: sda ;
+11:25:27,476 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:25:27,476 DEBUG   : device sda1 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387110>  PedPartition: <_ped.Partition object at 0x7f7357386050> has path /dev/sda1
+11:25:27,476 DEBUG   : growPartitions: disks=['sda'], partitions=['sda1(id 6)']
+11:25:27,476 DEBUG   : no growable partitions
+11:25:27,477 DEBUG   : looking for device 'sda-1'...
+11:25:27,477 DEBUG   : found None
+11:25:27,478 DEBUG   : looking for device 'sda1'...
+11:25:27,479 DEBUG   :                Ext4FS.supported: supported: True ;
+11:25:27,480 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = False
+  device = /dev/req2  uuid = None  exists = None
+  options = defaults  supported = True  formattable = True  resizable = None
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f73573871d0>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = 
+11:25:27,480 DEBUG   : looking for device 'sda-1'...
+11:25:27,480 DEBUG   : found None
+11:27:55,012 DEBUG   :         LVMPhysicalVolume.__init__:
+11:27:55,012 DEBUG   : getFormat('lvmpv') returning LVMPhysicalVolume instance
+11:27:55,013 DEBUG   :         MDRaidMember.__init__:
+11:27:55,014 DEBUG   : getFormat('software RAID') returning MDRaidMember instance
+11:27:56,974 DEBUG   :           Ext4FS.supported: supported: True ;
+11:27:56,974 DEBUG   : getFormat('ext4') returning Ext4FS instance
+11:27:56,975 DEBUG   :            PartitionDevice._setFormat: req3 ;
+11:27:56,976 DEBUG   :             PartitionDevice._setFormat: req3 ; current: None ; type: ext4 ;
+11:27:56,980 DEBUG   :           Ext4FS.supported: supported: True ;
+11:27:56,982 DEBUG   :            BindFS.supported: supported: False ;
+11:27:56,983 DEBUG   :           BindFS.supported: supported: False ;
+11:27:56,984 DEBUG   :             DevPtsFS.supported: supported: False ;
+11:27:56,984 DEBUG   :           DevPtsFS.supported: supported: False ;
+11:27:56,985 DEBUG   :           DiskLabel.__init__:
+11:27:56,985 INFO    : DiskLabel.partedDevice returning None
+11:27:56,986 DEBUG   :           DMRaidMember.__init__:
+11:27:56,986 DEBUG   :            Ext2FS.supported: supported: True ;
+11:27:56,987 DEBUG   :           Ext2FS.supported: supported: True ;
+11:27:56,988 DEBUG   :            Ext3FS.supported: supported: True ;
+11:27:56,989 DEBUG   :           Ext3FS.supported: supported: True ;
+11:27:56,990 DEBUG   :            Ext4FS.supported: supported: True ;
+11:27:56,991 DEBUG   :           Ext4FS.supported: supported: True ;
+11:27:56,992 DEBUG   :            HFS.supported: supported: False ;
+11:27:56,992 DEBUG   :           HFS.supported: supported: False ;
+11:27:56,993 DEBUG   :            HFSPlus.supported: supported: False ;
+11:27:56,994 DEBUG   :           HFSPlus.supported: supported: False ;
+11:27:56,994 DEBUG   :            Iso9660FS.supported: supported: True ;
+11:27:56,995 DEBUG   :           Iso9660FS.supported: supported: True ;
+11:27:56,995 DEBUG   :           LUKS.__init__:
+11:27:56,996 DEBUG   :           LVMPhysicalVolume.__init__:
+11:27:56,998 DEBUG   :           MDRaidMember.__init__:
+11:27:56,999 DEBUG   :           MultipathMember.__init__:
+11:27:57,000 DEBUG   :            NFS.supported: supported: False ;
+11:27:57,001 DEBUG   :           NFS.supported: supported: False ;
+11:27:57,001 DEBUG   :            NFSv4.supported: supported: False ;
+11:27:57,002 DEBUG   :           NFSv4.supported: supported: False ;
+11:27:57,003 DEBUG   :             NoDevFS.supported: supported: False ;
+11:27:57,003 DEBUG   :           NoDevFS.supported: supported: False ;
+11:27:57,004 DEBUG   :            NTFS.supported: supported: False ;
+11:27:57,004 DEBUG   :           NTFS.supported: supported: False ;
+11:27:57,007 DEBUG   :             ProcFS.supported: supported: False ;
+11:27:57,008 DEBUG   :           ProcFS.supported: supported: False ;
+11:27:57,009 DEBUG   :           SwapSpace.__init__:
+11:27:57,010 DEBUG   :             SysFS.supported: supported: False ;
+11:27:57,010 DEBUG   :           SysFS.supported: supported: False ;
+11:27:57,011 DEBUG   :             TmpFS.supported: supported: False ;
+11:27:57,011 DEBUG   :           TmpFS.supported: supported: False ;
+11:27:57,012 DEBUG   :            FATFS.supported: supported: True ;
+11:27:57,013 DEBUG   :           FATFS.supported: supported: True ;
+11:27:57,014 DEBUG   :            XFS.supported: supported: True ;
+11:27:57,016 DEBUG   :           XFS.supported: supported: True ;
+11:27:57,018 DEBUG   :            Ext4FS.supported: supported: True ;
+11:29:01,536 DEBUG   :            SwapSpace.__init__:
+11:30:05,294 DEBUG   :          SwapSpace.__init__: mountpoint: <Not Applicable> ;
+11:30:05,295 DEBUG   :              PartitionDevice._setFormat: req4 ;
+11:30:05,296 DEBUG   :               PartitionDevice._setFormat: req4 ; current: None ; type: swap ;
+11:30:05,298 DEBUG   :            PartitionDevice._setFormat: req4 ;
+11:30:05,300 DEBUG   :             PartitionDevice._setFormat: req4 ; current: swap ; type: swap ;
+11:30:05,300 DEBUG   : added partition req4 (id 8) to device tree
+11:30:05,301 DEBUG   : registered action: Create Device partition req4 (id 8)
+11:30:05,301 DEBUG   : registered action: Create Format swap on partition req4 (id 8)
+11:30:05,302 DEBUG   :           DiskDevice.setup: sda ; status: True ; orig: False ;
+11:30:05,303 DEBUG   : removing all non-preexisting partitions ['req4(id 8)', 'sda1(id 6)'] from disk(s) ['sda']
+11:30:05,305 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:30:05,305 DEBUG   : device sda1 new partedPartition None has path None
+11:30:05,307 DEBUG   :             PartitionDevice._setDisk: req2 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:30:05,309 DEBUG   :              DiskDevice.removeChild: kids: 1 ; name: sda ;
+11:30:05,310 DEBUG   : allocatePartitions: disks=['sda'] ; partitions=['req4(id 8)', 'req2(id 6)']
+11:30:05,310 DEBUG   : removing all non-preexisting partitions ['req2(id 6)', 'req4(id 8)'] from disk(s) ['sda']
+11:30:05,310 DEBUG   : allocating partition: req2 ; id: 6 ; disks: ['sda'] ;
+boot: True ; primary: True ; size: 200MB ; grow: None ; max_size: 0
+11:30:05,311 DEBUG   : checking freespace on sda
+11:30:05,311 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=200MB boot=True best=None grow=None
+11:30:05,311 DEBUG   : current free range is 63-20971519 (10239MB)
+11:30:05,313 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:30:05,313 DEBUG   : new free: parted.Geometry instance --
+  start: 63  end: 20971519  length: 20971457
+  device: <parted.device.Device object at 0x7f735a914150>  PedGeometry: <_ped.Geometry object at 0x7f735a8fccd0> (63-20971519 / 10239MB)
+11:30:05,313 DEBUG   : new free allows for 0 sectors of growth
+11:30:05,313 DEBUG   : found free space for bootable request
+11:30:05,314 DEBUG   : adjusted start sector from 63 to 2048
+11:30:05,314 DEBUG   : created partition sda1 of 200MB and added it to /dev/sda
+11:30:05,315 DEBUG   :             PartitionDevice._setPartedPartition: req2 ;
+11:30:05,315 DEBUG   : device req2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387e90>  PedPartition: <_ped.Partition object at 0x7f735a95d9b0> has path /dev/sda1
+11:30:05,316 DEBUG   :             PartitionDevice._setDisk: sda1 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:30:05,317 DEBUG   :              DiskDevice.addChild: kids: 0 ; name: sda ;
+11:30:05,318 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:30:05,318 DEBUG   : device sda1 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387d90>  PedPartition: <_ped.Partition object at 0x7f735737afb0> has path /dev/sda1
+11:30:05,318 DEBUG   : allocating partition: req4 ; id: 8 ; disks: ['sda'] ;
+boot: False ; primary: True ; size: 768MB ; grow: None ; max_size: 0
+11:30:05,318 DEBUG   : checking freespace on sda
+11:30:05,319 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=768MB boot=False best=None grow=None
+11:30:05,319 DEBUG   : current free range is 63-2047 (0MB)
+11:30:05,319 DEBUG   : current free range is 411648-20971519 (10039MB)
+11:30:05,319 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:30:05,319 DEBUG   : new free: parted.Geometry instance --
+  start: 411648  end: 20971519  length: 20559872
+  device: <parted.device.Device object at 0x7f7357387550>  PedGeometry: <_ped.Geometry object at 0x7f7357387cd0> (411648-20971519 / 10039MB)
+11:30:05,319 DEBUG   : new free allows for 0 sectors of growth
+11:30:05,320 DEBUG   : created partition sda2 of 768MB and added it to /dev/sda
+11:30:05,321 DEBUG   :             PartitionDevice._setPartedPartition: req4 ;
+11:30:05,321 DEBUG   : device req4 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387b10>  PedPartition: <_ped.Partition object at 0x7f735a8dacb0> has path /dev/sda2
+11:30:05,322 DEBUG   :             PartitionDevice._setDisk: sda2 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:30:05,323 DEBUG   :              DiskDevice.addChild: kids: 1 ; name: sda ;
+11:30:05,324 DEBUG   :             PartitionDevice._setPartedPartition: sda2 ;
+11:30:05,325 DEBUG   : device sda2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387a10>  PedPartition: <_ped.Partition object at 0x7f7357386170> has path /dev/sda2
+11:30:05,325 DEBUG   : growPartitions: disks=['sda'], partitions=['sda2(id 8)', 'sda1(id 6)']
+11:30:05,325 DEBUG   : no growable partitions
+11:30:05,326 DEBUG   : looking for device 'sda-1'...
+11:30:05,326 DEBUG   : found None
+11:30:05,326 DEBUG   : looking for device 'sda1'...
+11:30:05,327 DEBUG   :                Ext4FS.supported: supported: True ;
+11:30:05,327 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = False
+  device = /dev/req2  uuid = None  exists = None
+  options = defaults  supported = True  formattable = True  resizable = None
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f7357387210>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = 
+11:30:05,328 DEBUG   : looking for device 'sda2'...
+11:30:05,328 DEBUG   : found PartitionDevice instance (0x7f73599efe90) --
+  name = sda2  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 8
+  uuid = None  format = <storage.formats.swap.SwapSpace object at 0x7f73599efe50>  size = 768.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 768  path = /dev/sda2
+  format args = []  originalFormat = SwapSpace instance (0x7f73599efe50) --
+  type = swap  name = swap  status = None
+  device = /dev/req4  uuid = None  exists = None
+  options =   supported = True  formattable = True  resizable = False
+  priority = None  label = None  grow = None  max size = 0  bootable = False
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f7357387c10>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 411648  end = 1984511  length = 1572864
+  flags = 
+11:30:05,328 DEBUG   : looking for device 'sda-1'...
+11:30:05,329 DEBUG   : found None
+11:30:08,724 DEBUG   :         LVMPhysicalVolume.__init__:
+11:30:08,725 DEBUG   : getFormat('lvmpv') returning LVMPhysicalVolume instance
+11:30:08,726 DEBUG   :         MDRaidMember.__init__:
+11:30:08,726 DEBUG   : getFormat('software RAID') returning MDRaidMember instance
+11:30:11,174 DEBUG   :           Ext4FS.supported: supported: True ;
+11:30:11,174 DEBUG   : getFormat('ext4') returning Ext4FS instance
+11:30:11,175 DEBUG   :            PartitionDevice._setFormat: req5 ;
+11:30:11,176 DEBUG   :             PartitionDevice._setFormat: req5 ; current: None ; type: ext4 ;
+11:30:11,180 DEBUG   :           Ext4FS.supported: supported: True ;
+11:30:11,181 DEBUG   :            BindFS.supported: supported: False ;
+11:30:11,182 DEBUG   :           BindFS.supported: supported: False ;
+11:30:11,183 DEBUG   :             DevPtsFS.supported: supported: False ;
+11:30:11,183 DEBUG   :           DevPtsFS.supported: supported: False ;
+11:30:11,184 DEBUG   :           DiskLabel.__init__:
+11:30:11,184 INFO    : DiskLabel.partedDevice returning None
+11:30:11,184 DEBUG   :           DMRaidMember.__init__:
+11:30:11,185 DEBUG   :            Ext2FS.supported: supported: True ;
+11:30:11,186 DEBUG   :           Ext2FS.supported: supported: True ;
+11:30:11,188 DEBUG   :            Ext3FS.supported: supported: True ;
+11:30:11,189 DEBUG   :           Ext3FS.supported: supported: True ;
+11:30:11,191 DEBUG   :            Ext4FS.supported: supported: True ;
+11:30:11,191 DEBUG   :           Ext4FS.supported: supported: True ;
+11:30:11,193 DEBUG   :            HFS.supported: supported: False ;
+11:30:11,194 DEBUG   :           HFS.supported: supported: False ;
+11:30:11,195 DEBUG   :            HFSPlus.supported: supported: False ;
+11:30:11,196 DEBUG   :           HFSPlus.supported: supported: False ;
+11:30:11,198 DEBUG   :            Iso9660FS.supported: supported: True ;
+11:30:11,199 DEBUG   :           Iso9660FS.supported: supported: True ;
+11:30:11,199 DEBUG   :           LUKS.__init__:
+11:30:11,200 DEBUG   :           LVMPhysicalVolume.__init__:
+11:30:11,201 DEBUG   :           MDRaidMember.__init__:
+11:30:11,202 DEBUG   :           MultipathMember.__init__:
+11:30:11,202 DEBUG   :            NFS.supported: supported: False ;
+11:30:11,203 DEBUG   :           NFS.supported: supported: False ;
+11:30:11,204 DEBUG   :            NFSv4.supported: supported: False ;
+11:30:11,204 DEBUG   :           NFSv4.supported: supported: False ;
+11:30:11,205 DEBUG   :             NoDevFS.supported: supported: False ;
+11:30:11,205 DEBUG   :           NoDevFS.supported: supported: False ;
+11:30:11,206 DEBUG   :            NTFS.supported: supported: False ;
+11:30:11,206 DEBUG   :           NTFS.supported: supported: False ;
+11:30:11,207 DEBUG   :             ProcFS.supported: supported: False ;
+11:30:11,208 DEBUG   :           ProcFS.supported: supported: False ;
+11:30:11,208 DEBUG   :           SwapSpace.__init__:
+11:30:11,209 DEBUG   :             SysFS.supported: supported: False ;
+11:30:11,210 DEBUG   :           SysFS.supported: supported: False ;
+11:30:11,211 DEBUG   :             TmpFS.supported: supported: False ;
+11:30:11,211 DEBUG   :           TmpFS.supported: supported: False ;
+11:30:11,212 DEBUG   :            FATFS.supported: supported: True ;
+11:30:11,213 DEBUG   :           FATFS.supported: supported: True ;
+11:30:11,215 DEBUG   :            XFS.supported: supported: True ;
+11:30:11,216 DEBUG   :           XFS.supported: supported: True ;
+11:30:11,217 DEBUG   :            Ext4FS.supported: supported: True ;
+11:31:35,349 DEBUG   :           Ext4FS.supported: supported: True ;
+11:31:35,350 DEBUG   :              PartitionDevice._setFormat: req6 ;
+11:31:35,352 DEBUG   :               PartitionDevice._setFormat: req6 ; current: None ; type: ext4 ;
+11:31:35,353 DEBUG   :            PartitionDevice._setFormat: req6 ;
+11:31:35,355 DEBUG   :             PartitionDevice._setFormat: req6 ; current: ext4 ; type: ext4 ;
+11:31:35,355 DEBUG   : added partition req6 (id 10) to device tree
+11:31:35,355 DEBUG   : registered action: Create Device partition req6 (id 10)
+11:31:35,355 DEBUG   : registered action: Create Format ext4 on partition req6 (id 10)
+11:31:35,357 DEBUG   :           DiskDevice.setup: sda ; status: True ; orig: False ;
+11:31:35,357 DEBUG   : removing all non-preexisting partitions ['req6(id 10)', 'sda1(id 6)', 'sda2(id 8)'] from disk(s) ['sda']
+11:31:35,358 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:31:35,358 DEBUG   : device sda1 new partedPartition None has path None
+11:31:35,359 DEBUG   :             PartitionDevice._setDisk: req2 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,360 DEBUG   :              DiskDevice.removeChild: kids: 2 ; name: sda ;
+11:31:35,361 DEBUG   :             PartitionDevice._setPartedPartition: sda2 ;
+11:31:35,361 DEBUG   : device sda2 new partedPartition None has path None
+11:31:35,362 DEBUG   :             PartitionDevice._setDisk: req4 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,363 DEBUG   :              DiskDevice.removeChild: kids: 1 ; name: sda ;
+11:31:35,363 DEBUG   : allocatePartitions: disks=['sda'] ; partitions=['req6(id 10)', 'req2(id 6)', 'req4(id 8)']
+11:31:35,363 DEBUG   : removing all non-preexisting partitions ['req2(id 6)', 'req4(id 8)', 'req6(id 10)'] from disk(s) ['sda']
+11:31:35,363 DEBUG   : allocating partition: req2 ; id: 6 ; disks: ['sda'] ;
+boot: True ; primary: True ; size: 200MB ; grow: None ; max_size: 0
+11:31:35,363 DEBUG   : checking freespace on sda
+11:31:35,363 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=200MB boot=True best=None grow=None
+11:31:35,363 DEBUG   : current free range is 63-20971519 (10239MB)
+11:31:35,364 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:31:35,364 DEBUG   : new free: parted.Geometry instance --
+  start: 63  end: 20971519  length: 20971457
+  device: <parted.device.Device object at 0x7f7357387a50>  PedGeometry: <_ped.Geometry object at 0x7f7357387b50> (63-20971519 / 10239MB)
+11:31:35,364 DEBUG   : new free allows for 0 sectors of growth
+11:31:35,364 DEBUG   : found free space for bootable request
+11:31:35,364 DEBUG   : adjusted start sector from 63 to 2048
+11:31:35,364 DEBUG   : created partition sda1 of 200MB and added it to /dev/sda
+11:31:35,365 DEBUG   :             PartitionDevice._setPartedPartition: req2 ;
+11:31:35,365 DEBUG   : device req2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387dd0>  PedPartition: <_ped.Partition object at 0x7f735737afb0> has path /dev/sda1
+11:31:35,366 DEBUG   :             PartitionDevice._setDisk: sda1 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,367 DEBUG   :              DiskDevice.addChild: kids: 0 ; name: sda ;
+11:31:35,368 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:31:35,368 DEBUG   : device sda1 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387e90>  PedPartition: <_ped.Partition object at 0x7f735a95d9b0> has path /dev/sda1
+11:31:35,369 DEBUG   : allocating partition: req4 ; id: 8 ; disks: ['sda'] ;
+boot: False ; primary: True ; size: 768MB ; grow: None ; max_size: 0
+11:31:35,371 DEBUG   : checking freespace on sda
+11:31:35,371 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=768MB boot=False best=None grow=None
+11:31:35,372 DEBUG   : current free range is 63-2047 (0MB)
+11:31:35,372 DEBUG   : current free range is 411648-20971519 (10039MB)
+11:31:35,373 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:31:35,373 DEBUG   : new free: parted.Geometry instance --
+  start: 411648  end: 20971519  length: 20559872
+  device: <parted.device.Device object at 0x7f7357374fd0>  PedGeometry: <_ped.Geometry object at 0x7f7357374f50> (411648-20971519 / 10039MB)
+11:31:35,373 DEBUG   : new free allows for 0 sectors of growth
+11:31:35,374 DEBUG   : created partition sda2 of 768MB and added it to /dev/sda
+11:31:35,375 DEBUG   :             PartitionDevice._setPartedPartition: req4 ;
+11:31:35,375 DEBUG   : device req4 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735a9142d0>  PedPartition: <_ped.Partition object at 0x7f735a8dacb0> has path /dev/sda2
+11:31:35,376 DEBUG   :             PartitionDevice._setDisk: sda2 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,377 DEBUG   :              DiskDevice.addChild: kids: 1 ; name: sda ;
+11:31:35,378 DEBUG   :             PartitionDevice._setPartedPartition: sda2 ;
+11:31:35,378 DEBUG   : device sda2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357374d50>  PedPartition: <_ped.Partition object at 0x7f735738c050> has path /dev/sda2
+11:31:35,378 DEBUG   : allocating partition: req6 ; id: 10 ; disks: ['sda'] ;
+boot: False ; primary: None ; size: 200MB ; grow: True ; max_size: 0
+11:31:35,378 DEBUG   : checking freespace on sda
+11:31:35,378 DEBUG   : getBestFreeSpaceRegion: disk=/dev/sda part_type=0 req_size=200MB boot=False best=None grow=True
+11:31:35,379 DEBUG   : current free range is 63-2047 (0MB)
+11:31:35,379 DEBUG   : current free range is 1984512-20971519 (9271MB)
+11:31:35,379 DEBUG   : evaluating growth potential for new layout
+11:31:35,379 DEBUG   : calculating growth for disk /dev/sda
+11:31:35,380 DEBUG   :             PartitionDevice._setPartedPartition: req6 ;
+11:31:35,380 DEBUG   : device req6 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387c50>  PedPartition: <_ped.Partition object at 0x7f735738c0b0> has path /dev/sda3
+11:31:35,381 DEBUG   :             PartitionDevice._setDisk: sda3 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,382 DEBUG   :              DiskDevice.addChild: kids: 2 ; name: sda ;
+11:31:35,382 DEBUG   : adding request 6 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 20969472
+remaining = 0  sectorSize = 512
+11:31:35,383 DEBUG   : adding request 8 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 20559872
+remaining = 0  sectorSize = 512
+11:31:35,383 DEBUG   : adding request 10 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 18987008
+remaining = 0  sectorSize = 512
+11:31:35,383 DEBUG   : Chunk.growRequests: Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 18577408
+remaining = 1  sectorSize = 512
+11:31:35,383 DEBUG   : 1 partitions and 18577408 (9071MB) left in chunk
+11:31:35,383 DEBUG   : adding 18577408 (9071MB) to 10 (sda3)
+11:31:35,383 DEBUG   : new grow amount for partition 10 (sda3) is 18577408 sectors, or 9071MB
+11:31:35,383 DEBUG   : request 6 (sda1) growth: 0 (0MB) size: 200MB
+11:31:35,383 DEBUG   : request 8 (sda2) growth: 0 (0MB) size: 768MB
+11:31:35,383 DEBUG   : request 10 (sda3) growth: 18577408 (9071MB) size: 9271MB
+11:31:35,383 DEBUG   : disk /dev/sda growth: 18577408 (9071MB)
+11:31:35,384 DEBUG   :             PartitionDevice._setPartedPartition: sda3 ;
+11:31:35,384 DEBUG   : device sda3 new partedPartition None has path None
+11:31:35,386 DEBUG   :             PartitionDevice._setDisk: req6 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,388 DEBUG   :              DiskDevice.removeChild: kids: 3 ; name: sda ;
+11:31:35,388 DEBUG   : total growth: 18577408 sectors
+11:31:35,389 DEBUG   : updating use_disk to DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> (sda), type: 0
+11:31:35,389 DEBUG   : new free: parted.Geometry instance --
+  start: 1984512  end: 20971519  length: 18987008
+  device: <parted.device.Device object at 0x7f735a8fcd50>  PedGeometry: <_ped.Geometry object at 0x7f7357374d90> (1984512-20971519 / 9271MB)
+11:31:35,389 DEBUG   : new free allows for 18577408 sectors of growth
+11:31:35,390 DEBUG   : created partition sda3 of 200MB and added it to /dev/sda
+11:31:35,391 DEBUG   :             PartitionDevice._setPartedPartition: req6 ;
+11:31:35,391 DEBUG   : device req6 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387890>  PedPartition: <_ped.Partition object at 0x7f735738c110> has path /dev/sda3
+11:31:35,392 DEBUG   :             PartitionDevice._setDisk: sda3 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,393 DEBUG   :              DiskDevice.addChild: kids: 2 ; name: sda ;
+11:31:35,393 DEBUG   :             PartitionDevice._setPartedPartition: sda3 ;
+11:31:35,394 DEBUG   : device sda3 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f73573873d0>  PedPartition: <_ped.Partition object at 0x7f735738c290> has path /dev/sda3
+11:31:35,394 DEBUG   : growPartitions: disks=['sda'], partitions=['sda3(id 10)', 'sda1(id 6)', 'sda2(id 8)']
+11:31:35,394 DEBUG   : growable partitions are ['sda3']
+11:31:35,394 DEBUG   : growing partitions on sda
+11:31:35,394 DEBUG   : adding request 10 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 20969472
+remaining = 0  sectorSize = 512
+11:31:35,394 DEBUG   : adding request 6 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 20559872
+remaining = 1  sectorSize = 512
+11:31:35,394 DEBUG   : adding request 8 to chunk Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 20150272
+remaining = 1  sectorSize = 512
+11:31:35,395 DEBUG   : disk sda has 1 chunks
+11:31:35,395 DEBUG   : Chunk.growRequests: Chunk instance --
+device = /dev/sda  start = 2048  end = 20971519
+length = 20969472  size = 10239 pool = 18577408
+remaining = 1  sectorSize = 512
+11:31:35,395 DEBUG   : 1 partitions and 18577408 (9071MB) left in chunk
+11:31:35,395 DEBUG   : adding 18577408 (9071MB) to 10 (sda3)
+11:31:35,395 DEBUG   : new grow amount for partition 10 (sda3) is 18577408 sectors, or 9071MB
+11:31:35,395 DEBUG   : partition sda1 (6): 0
+11:31:35,395 DEBUG   : new geometry for sda1: parted.Geometry instance --
+  start: 2048  end: 411647  length: 409600
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f73573870d0>
+11:31:35,395 DEBUG   : partition sda2 (8): 0
+11:31:35,395 DEBUG   : new geometry for sda2: parted.Geometry instance --
+  start: 411648  end: 1984511  length: 1572864
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f735738e050>
+11:31:35,395 DEBUG   : partition sda3 (10): 0
+11:31:35,396 DEBUG   : new geometry for sda3: parted.Geometry instance --
+  start: 1984512  end: 20971519  length: 18987008
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f735738e1d0>
+11:31:35,396 DEBUG   : removing all non-preexisting partitions ['sda1(id 6)', 'sda2(id 8)', 'sda3(id 10)'] from disk(s) ['sda']
+11:31:35,396 DEBUG   :              PartitionDevice._setPartedPartition: sda1 ;
+11:31:35,396 DEBUG   : device sda1 new partedPartition None has path None
+11:31:35,398 DEBUG   :              PartitionDevice._setDisk: req2 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,398 DEBUG   :               DiskDevice.removeChild: kids: 3 ; name: sda ;
+11:31:35,399 DEBUG   :              PartitionDevice._setPartedPartition: sda2 ;
+11:31:35,399 DEBUG   : device sda2 new partedPartition None has path None
+11:31:35,400 DEBUG   :              PartitionDevice._setDisk: req4 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,401 DEBUG   :               DiskDevice.removeChild: kids: 2 ; name: sda ;
+11:31:35,402 DEBUG   :              PartitionDevice._setPartedPartition: sda3 ;
+11:31:35,402 DEBUG   : device sda3 new partedPartition None has path None
+11:31:35,404 DEBUG   :              PartitionDevice._setDisk: req6 ; new: None ; old: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 0  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ;
+11:31:35,405 DEBUG   :               DiskDevice.removeChild: kids: 1 ; name: sda ;
+11:31:35,405 DEBUG   : back from removeNewPartitions
+11:31:35,405 DEBUG   : extended: None
+11:31:35,405 DEBUG   : setting req2 new geometry: parted.Geometry instance --
+  start: 2048  end: 411647  length: 409600
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f73573870d0>
+11:31:35,406 DEBUG   :             PartitionDevice._setPartedPartition: req2 ;
+11:31:35,406 DEBUG   : device req2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387a10>  PedPartition: <_ped.Partition object at 0x7f735737afb0> has path /dev/sda1
+11:31:35,407 DEBUG   :             PartitionDevice._setDisk: sda1 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 0
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 1  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,408 DEBUG   :              DiskDevice.addChild: kids: 0 ; name: sda ;
+11:31:35,409 DEBUG   :             PartitionDevice._setPartedPartition: sda1 ;
+11:31:35,410 DEBUG   : device sda1 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738e410>  PedPartition: <_ped.Partition object at 0x7f735738c170> has path /dev/sda1
+11:31:35,410 DEBUG   : setting req4 new geometry: parted.Geometry instance --
+  start: 411648  end: 1984511  length: 1572864
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f735738e050>
+11:31:35,411 DEBUG   :             PartitionDevice._setPartedPartition: req4 ;
+11:31:35,412 DEBUG   : device req4 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387710>  PedPartition: <_ped.Partition object at 0x7f735738c230> has path /dev/sda2
+11:31:35,413 DEBUG   :             PartitionDevice._setDisk: sda2 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 1
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 2  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,414 DEBUG   :              DiskDevice.addChild: kids: 1 ; name: sda ;
+11:31:35,415 DEBUG   :             PartitionDevice._setPartedPartition: sda2 ;
+11:31:35,415 DEBUG   : device sda2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738e750>  PedPartition: <_ped.Partition object at 0x7f735738c1d0> has path /dev/sda2
+11:31:35,415 DEBUG   : setting req6 new geometry: parted.Geometry instance --
+  start: 1984512  end: 20971519  length: 18987008
+  device: <parted.device.Device object at 0x7f735a909a10>  PedGeometry: <_ped.Geometry object at 0x7f735738e1d0>
+11:31:35,416 DEBUG   :             PartitionDevice._setPartedPartition: req6 ;
+11:31:35,416 DEBUG   : device req6 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738e590>  PedPartition: <_ped.Partition object at 0x7f735738c2f0> has path /dev/sda3
+11:31:35,417 DEBUG   :             PartitionDevice._setDisk: sda3 ; new: DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 2
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0> ; old: None ;
+11:31:35,420 DEBUG   :              DiskDevice.addChild: kids: 2 ; name: sda ;
+11:31:35,421 DEBUG   :             PartitionDevice._setPartedPartition: sda3 ;
+11:31:35,421 DEBUG   : device sda3 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909b90>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738ed10>  PedPartition: <_ped.Partition object at 0x7f735738c470> has path /dev/sda3
+11:31:35,422 DEBUG   : looking for device 'sda-1'...
+11:31:35,422 DEBUG   : found None
+11:31:35,422 DEBUG   : looking for device 'sda1'...
+11:31:35,423 DEBUG   :                Ext4FS.supported: supported: True ;
+11:31:35,423 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = False
+  device = /dev/req2  uuid = None  exists = None
+  options = defaults  supported = True  formattable = True  resizable = None
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f7357387d50>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = 
+11:31:35,424 DEBUG   : looking for device 'sda2'...
+11:31:35,424 DEBUG   : found PartitionDevice instance (0x7f73599efe90) --
+  name = sda2  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 8
+  uuid = None  format = <storage.formats.swap.SwapSpace object at 0x7f73599efe50>  size = 768.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 768  path = /dev/sda2
+  format args = []  originalFormat = SwapSpace instance (0x7f73599efe50) --
+  type = swap  name = swap  status = None
+  device = /dev/req4  uuid = None  exists = None
+  options =   supported = True  formattable = True  resizable = False
+  priority = None  label = None  grow = None  max size = 0  bootable = False
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e690>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 411648  end = 1984511  length = 1572864
+  flags = 
+11:31:35,425 DEBUG   : looking for device 'sda3'...
+11:31:35,426 DEBUG   :                Ext4FS.supported: supported: True ;
+11:31:35,426 DEBUG   : found PartitionDevice instance (0x7f7357387050) --
+  name = sda3  status = False  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 10
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f7357387750>  size = 9271.0
+  major = 0  minor = 0  exists = None
+  sysfs path =   partedDevice = None
+  target size = 200  path = /dev/sda3
+  format args = []  originalFormat = Ext4FS instance (0x7f7357387750) --
+  type = ext4  name = ext4  status = False
+  device = /dev/req6  uuid = None  exists = None
+  options = defaults  supported = True  formattable = True  resizable = None
+  mountpoint = /  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = True  max size = 0  bootable = False
+  part type = 0  primary = None
+  partedPartition = <parted.partition.Partition object at 0x7f735738ecd0>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 1984512  end = 20971519  length = 18987008
+  flags = 
+12:11:52,485 DEBUG   : looking for device 'sda'...
+12:11:52,485 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = False
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909b90>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:12:00,828 DEBUG   :           OpticalDevice.teardown: sr0 ; status: True ;
+12:12:00,865 DEBUG   :           PartitionDevice.teardown: sda1 ; status: False ;
+12:12:00,866 DEBUG   :            PartitionDevice.teardown: sda1 ; status: False ;
+12:12:00,869 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:00,890 DEBUG   :           PartitionDevice.teardown: sda2 ; status: False ;
+12:12:00,891 DEBUG   :            PartitionDevice.teardown: sda2 ; status: False ;
+12:12:00,891 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:00,913 DEBUG   :           PartitionDevice.teardown: sda3 ; status: False ;
+12:12:00,914 DEBUG   :            PartitionDevice.teardown: sda3 ; status: False ;
+12:12:00,915 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:00,943 DEBUG   :           OpticalDevice.teardown: sr0 ; status: True ;
+12:12:00,965 DEBUG   :           PartitionDevice.teardown: sda1 ; status: False ;
+12:12:00,967 DEBUG   :            PartitionDevice.teardown: sda1 ; status: False ;
+12:12:00,968 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:00,990 DEBUG   :           PartitionDevice.teardown: sda2 ; status: False ;
+12:12:00,991 DEBUG   :            PartitionDevice.teardown: sda2 ; status: False ;
+12:12:00,991 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:01,012 DEBUG   :           PartitionDevice.teardown: sda3 ; status: False ;
+12:12:01,012 DEBUG   :            PartitionDevice.teardown: sda3 ; status: False ;
+12:12:01,014 DEBUG   :              DiskDevice.teardown: sda ; status: True ;
+12:12:01,036 DEBUG   : resetting parted disks...
+12:12:01,037 DEBUG   :            DiskLabel.resetPartedDisk: device: /dev/sda ;
+12:12:01,038 DEBUG   :            PartitionDevice.preCommitFixup: sda1 ;
+12:12:01,038 DEBUG   :            PartitionDevice.preCommitFixup: sda2 ;
+12:12:01,039 DEBUG   :            PartitionDevice.preCommitFixup: sda3 ;
+12:12:01,039 DEBUG   : action: Destroy Format None on disk sda (id 2)
+12:12:01,039 DEBUG   : action: Create Format disklabel on disk sda (id 2)
+12:12:01,040 DEBUG   : action: Create Device partition sda1 (id 6)
+12:12:01,040 DEBUG   : action: Create Format ext4 on partition sda1 (id 6)
+12:12:01,040 DEBUG   : action: Create Device partition sda2 (id 8)
+12:12:01,040 DEBUG   : action: Create Format swap on partition sda2 (id 8)
+12:12:01,040 DEBUG   : action: Create Device partition sda3 (id 10)
+12:12:01,040 DEBUG   : action: Create Format ext4 on partition sda3 (id 10)
+12:12:01,040 DEBUG   : pruning action queue...
+12:12:01,040 DEBUG   : action 'Create Device partition sda1 (id 6)' (140133361092240)
+12:12:01,040 DEBUG   : action 'Create Device partition sda2 (id 8)' (140133401558416)
+12:12:01,040 DEBUG   : action 'Create Device partition sda3 (id 10)' (140133361285456)
+12:12:01,040 DEBUG   : action 'Destroy Format None on disk sda (id 2)' (140133417393744)
+12:12:01,040 DEBUG   : action 'Create Format disklabel on disk sda (id 2)' (140133417393872)
+12:12:01,041 DEBUG   : action 'Create Format ext4 on partition sda1 (id 6)' (140133361092048)
+12:12:01,041 DEBUG   : action 'Create Format swap on partition sda2 (id 8)' (140133401558480)
+12:12:01,041 DEBUG   : action 'Create Format ext4 on partition sda3 (id 10)' (140133361285904)
+12:12:01,041 DEBUG   : action: Destroy Format None on disk sda (id 2)
+12:12:01,041 DEBUG   : action: Create Format disklabel on disk sda (id 2)
+12:12:01,041 DEBUG   : action: Create Device partition sda1 (id 6)
+12:12:01,041 DEBUG   : action: Create Format ext4 on partition sda1 (id 6)
+12:12:01,041 DEBUG   : action: Create Device partition sda2 (id 8)
+12:12:01,041 DEBUG   : action: Create Format swap on partition sda2 (id 8)
+12:12:01,041 DEBUG   : action: Create Device partition sda3 (id 10)
+12:12:01,041 DEBUG   : action: Create Format ext4 on partition sda3 (id 10)
+12:12:01,041 DEBUG   : sorting actions...
+12:12:01,041 DEBUG   : cmp: 1 -- Create Format disklabel on disk sda (id 2) | Destroy Format None on disk sda (id 2)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Device partition sda1 (id 6) | Create Format disklabel on disk sda (id 2)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Format ext4 on partition sda1 (id 6) | Create Device partition sda1 (id 6)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Device partition sda2 (id 8) | Create Format ext4 on partition sda1 (id 6)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Format swap on partition sda2 (id 8) | Create Device partition sda2 (id 8)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Device partition sda3 (id 10) | Create Format swap on partition sda2 (id 8)
+12:12:01,042 DEBUG   : cmp: 1 -- Create Format ext4 on partition sda3 (id 10) | Create Device partition sda3 (id 10)
+12:12:01,042 DEBUG   : action: Destroy Format None on disk sda (id 2)
+12:12:01,042 DEBUG   : lvm filter: removing sda1 from the reject list
+12:12:01,042 DEBUG   : sda1 wasn't in the reject list
+12:12:01,042 DEBUG   : lvm filter: removing sda2 from the reject list
+12:12:01,042 DEBUG   : sda2 wasn't in the reject list
+12:12:01,042 DEBUG   : lvm filter: removing sda3 from the reject list
+12:12:01,043 DEBUG   : sda3 wasn't in the reject list
+12:12:01,043 DEBUG   : action: Create Format disklabel on disk sda (id 2)
+12:12:01,043 DEBUG   : lvm filter: removing sda1 from the reject list
+12:12:01,043 DEBUG   : sda1 wasn't in the reject list
+12:12:01,043 DEBUG   : lvm filter: removing sda2 from the reject list
+12:12:01,043 DEBUG   : sda2 wasn't in the reject list
+12:12:01,043 DEBUG   : lvm filter: removing sda3 from the reject list
+12:12:01,043 DEBUG   : sda3 wasn't in the reject list
+12:12:01,043 DEBUG   : action: Create Device partition sda1 (id 6)
+12:12:01,043 DEBUG   : action: Create Format ext4 on partition sda1 (id 6)
+12:12:01,043 DEBUG   : action: Create Device partition sda2 (id 8)
+12:12:01,043 DEBUG   : action: Create Format swap on partition sda2 (id 8)
+12:12:01,043 DEBUG   : action: Create Device partition sda3 (id 10)
+12:12:01,043 DEBUG   : action: Create Format ext4 on partition sda3 (id 10)
+12:12:01,044 INFO    : executing action: Destroy Format None on disk sda (id 2)
+12:12:01,044 DEBUG   :             DiskDevice.setup: sda ; status: True ; orig: True ;
+12:12:01,046 DEBUG   :             DeviceFormat.destroy: device: /dev/sda ; status: False ; type: None ;
+12:12:01,046 DEBUG   : zeroing out beginning and end of /dev/sda...
+12:12:01,121 DEBUG   :             DiskDevice.teardown: sda ; status: True ;
+12:12:01,180 INFO    : executing action: Create Format disklabel on disk sda (id 2)
+12:12:01,183 DEBUG   :             DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,184 DEBUG   :             DiskLabel.create: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,185 DEBUG   :              DiskLabel.create: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,186 DEBUG   :              DiskLabel.commit: device: /dev/sda ; numparts: 0 ;
+12:12:01,241 DEBUG   :             DiskDevice.updateSysfsPath: sda ; status: True ;
+12:12:01,242 DEBUG   : sda sysfsPath set to /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda
+12:12:01,260 INFO    : executing action: Create Device partition sda1 (id 6)
+12:12:01,261 DEBUG   :             PartitionDevice.create: sda1 ; status: False ;
+12:12:01,271 INFO    : NOTE: recursive device creation disabled
+12:12:01,272 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda1 ; orig: False ;
+12:12:01,273 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,274 DEBUG   :              DiskLabel.commit: device: /dev/sda ; numparts: 1 ;
+12:12:01,329 DEBUG   :              DeviceFormat.destroy: device: /dev/sda1 ; status: False ; type: None ;
+12:12:01,329 DEBUG   : zeroing out beginning and end of /dev/sda1...
+12:12:01,342 DEBUG   :               PartitionDevice._setPartedPartition: sda1 ;
+12:12:01,344 DEBUG   : device sda1 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909d10>  fileSystem: None
+  number: 1  path: /dev/sda1  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738e110>  PedPartition: <_ped.Partition object at 0x7f735738cfb0> has path /dev/sda1
+12:12:01,345 DEBUG   :              PartitionDevice.setup: sda1 ; status: True ; orig: False ;
+12:12:01,346 DEBUG   :               PartitionDevice.setupParents: kids: 0 ; name: sda1 ; orig: False ;
+12:12:01,347 DEBUG   :                DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,348 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,349 DEBUG   :                DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,365 INFO    : executing action: Create Format ext4 on partition sda1 (id 6)
+12:12:01,366 DEBUG   :             PartitionDevice.setup: sda1 ; status: True ; orig: False ;
+12:12:01,367 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda1 ; orig: False ;
+12:12:01,368 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,368 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,369 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,370 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 1 ;
+12:12:01,371 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 1 ;
+12:12:01,372 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 2 ;
+12:12:01,373 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 2 ;
+12:12:01,374 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 3 ;
+12:12:01,374 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 3 ;
+12:12:01,375 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 4 ;
+12:12:01,376 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 4 ;
+12:12:01,376 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 5 ;
+12:12:01,378 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 5 ;
+12:12:01,379 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 6 ;
+12:12:01,380 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 6 ;
+12:12:01,381 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 8 ;
+12:12:01,382 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 8 ;
+12:12:01,383 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 9 ;
+12:12:01,384 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 9 ;
+12:12:01,385 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 10 ;
+12:12:01,385 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 10 ;
+12:12:01,386 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 11 ;
+12:12:01,387 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 11 ;
+12:12:01,388 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 12 ;
+12:12:01,388 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 12 ;
+12:12:01,389 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 13 ;
+12:12:01,390 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 13 ;
+12:12:01,390 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 14 ;
+12:12:01,391 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 14 ;
+12:12:01,392 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda1 ; flag: 15 ;
+12:12:01,392 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 15 ;
+12:12:01,393 DEBUG   :             DiskLabel.commitToDisk: device: /dev/sda ; numparts: 1 ;
+12:12:01,401 DEBUG   :              Ext4FS.create: device: /dev/sda1 ; status: False ; type: ext4 ;
+12:12:01,403 DEBUG   :               Ext4FS.doFormat: device: /dev/sda1 ; mountpoint: /boot ; type: ext4 ;
+12:12:01,607 DEBUG   :                Ext4FS.notifyKernel: device: /dev/sda1 ; type: ext4 ;
+12:12:01,666 DEBUG   :             PartitionDevice.updateSysfsPath: sda1 ; status: True ;
+12:12:01,667 DEBUG   :              PartitionDevice.updateSysfsPath: sda1 ; status: True ;
+12:12:01,668 DEBUG   : sda1 sysfsPath set to /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1
+12:12:01,685 INFO    : executing action: Create Device partition sda2 (id 8)
+12:12:01,686 DEBUG   :             PartitionDevice.create: sda2 ; status: False ;
+12:12:01,695 INFO    : NOTE: recursive device creation disabled
+12:12:01,696 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda2 ; orig: False ;
+12:12:01,697 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,701 DEBUG   :              DiskLabel.commit: device: /dev/sda ; numparts: 2 ;
+12:12:01,760 DEBUG   :              DeviceFormat.destroy: device: /dev/sda2 ; status: False ; type: None ;
+12:12:01,760 DEBUG   : zeroing out beginning and end of /dev/sda2...
+12:12:01,771 DEBUG   :               PartitionDevice._setPartedPartition: sda2 ;
+12:12:01,771 DEBUG   : device sda2 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909d10>  fileSystem: None
+  number: 2  path: /dev/sda2  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f7357387890>  PedPartition: <_ped.Partition object at 0x7f735aab70b0> has path /dev/sda2
+12:12:01,772 DEBUG   :              PartitionDevice.setup: sda2 ; status: True ; orig: False ;
+12:12:01,773 DEBUG   :               PartitionDevice.setupParents: kids: 0 ; name: sda2 ; orig: False ;
+12:12:01,774 DEBUG   :                DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,775 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,776 DEBUG   :                DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,791 INFO    : executing action: Create Format swap on partition sda2 (id 8)
+12:12:01,792 DEBUG   :             PartitionDevice.setup: sda2 ; status: True ; orig: False ;
+12:12:01,793 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda2 ; orig: False ;
+12:12:01,794 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,795 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,798 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:01,799 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 1 ;
+12:12:01,800 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 1 ;
+12:12:01,800 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 2 ;
+12:12:01,801 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 2 ;
+12:12:01,802 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 4 ;
+12:12:01,802 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 4 ;
+12:12:01,803 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 5 ;
+12:12:01,804 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 5 ;
+12:12:01,804 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 6 ;
+12:12:01,805 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 6 ;
+12:12:01,806 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 8 ;
+12:12:01,806 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 8 ;
+12:12:01,807 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 9 ;
+12:12:01,808 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 9 ;
+12:12:01,808 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 10 ;
+12:12:01,809 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 10 ;
+12:12:01,810 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 11 ;
+12:12:01,811 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 11 ;
+12:12:01,812 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 12 ;
+12:12:01,813 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 12 ;
+12:12:01,813 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 13 ;
+12:12:01,815 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 13 ;
+12:12:01,816 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 14 ;
+12:12:01,817 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 14 ;
+12:12:01,818 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda2 ; flag: 15 ;
+12:12:01,818 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 15 ;
+12:12:01,819 DEBUG   :             PartitionDevice.setFlag: path: /dev/sda2 ; flag: 3 ;
+12:12:01,820 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda2 ; flag: 3 ;
+12:12:01,820 DEBUG   :             DiskLabel.commitToDisk: device: /dev/sda ; numparts: 2 ;
+12:12:01,828 DEBUG   :             SwapSpace.create: device: /dev/sda2 ; status: None ; type: swap ;
+12:12:01,845 DEBUG   :              SwapSpace.create: device: /dev/sda2 ; status: None ; type: swap ;
+12:12:01,886 DEBUG   :             PartitionDevice.updateSysfsPath: sda2 ; status: True ;
+12:12:01,887 DEBUG   :              PartitionDevice.updateSysfsPath: sda2 ; status: True ;
+12:12:01,887 DEBUG   : sda2 sysfsPath set to /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda2
+12:12:01,903 INFO    : executing action: Create Device partition sda3 (id 10)
+12:12:01,904 DEBUG   :             PartitionDevice.create: sda3 ; status: False ;
+12:12:01,915 INFO    : NOTE: recursive device creation disabled
+12:12:01,916 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda3 ; orig: False ;
+12:12:01,918 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:01,920 DEBUG   :              DiskLabel.commit: device: /dev/sda ; numparts: 3 ;
+12:12:01,994 DEBUG   :              DeviceFormat.destroy: device: /dev/sda3 ; status: False ; type: None ;
+12:12:01,994 DEBUG   : zeroing out beginning and end of /dev/sda3...
+12:12:02,005 DEBUG   :               PartitionDevice._setPartedPartition: sda3 ;
+12:12:02,006 DEBUG   : device sda3 new partedPartition parted.Partition instance --
+  disk: <parted.disk.Disk object at 0x7f735a909d10>  fileSystem: None
+  number: 3  path: /dev/sda3  type: 0
+  name: None  active: True  busy: False
+  geometry: <parted.geometry.Geometry object at 0x7f735738e9d0>  PedPartition: <_ped.Partition object at 0x7f735aab7290> has path /dev/sda3
+12:12:02,007 DEBUG   :              PartitionDevice.setup: sda3 ; status: True ; orig: False ;
+12:12:02,008 DEBUG   :               PartitionDevice.setupParents: kids: 0 ; name: sda3 ; orig: False ;
+12:12:02,010 DEBUG   :                DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:02,011 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:02,012 DEBUG   :                DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:02,031 INFO    : executing action: Create Format ext4 on partition sda3 (id 10)
+12:12:02,033 DEBUG   :             PartitionDevice.setup: sda3 ; status: True ; orig: False ;
+12:12:02,035 DEBUG   :              PartitionDevice.setupParents: kids: 0 ; name: sda3 ; orig: False ;
+12:12:02,036 DEBUG   :               DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:02,038 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:02,039 DEBUG   :               DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:02,040 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 1 ;
+12:12:02,042 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 1 ;
+12:12:02,043 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 2 ;
+12:12:02,044 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 2 ;
+12:12:02,045 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 3 ;
+12:12:02,047 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 3 ;
+12:12:02,048 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 4 ;
+12:12:02,048 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 4 ;
+12:12:02,049 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 5 ;
+12:12:02,050 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 5 ;
+12:12:02,050 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 6 ;
+12:12:02,051 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 6 ;
+12:12:02,052 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 8 ;
+12:12:02,052 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 8 ;
+12:12:02,053 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 9 ;
+12:12:02,054 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 9 ;
+12:12:02,054 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 10 ;
+12:12:02,055 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 10 ;
+12:12:02,056 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 11 ;
+12:12:02,056 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 11 ;
+12:12:02,058 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 12 ;
+12:12:02,058 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 12 ;
+12:12:02,059 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 13 ;
+12:12:02,060 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 13 ;
+12:12:02,060 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 14 ;
+12:12:02,061 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 14 ;
+12:12:02,062 DEBUG   :             PartitionDevice.unsetFlag: path: /dev/sda3 ; flag: 15 ;
+12:12:02,063 DEBUG   :              PartitionDevice.flagAvailable: path: /dev/sda3 ; flag: 15 ;
+12:12:02,064 DEBUG   :             DiskLabel.commitToDisk: device: /dev/sda ; numparts: 3 ;
+12:12:02,070 DEBUG   :              Ext4FS.create: device: /dev/sda3 ; status: False ; type: ext4 ;
+12:12:02,072 DEBUG   :               Ext4FS.doFormat: device: /dev/sda3 ; mountpoint: / ; type: ext4 ;
+12:12:03,978 DEBUG   :                Ext4FS.notifyKernel: device: /dev/sda3 ; type: ext4 ;
+12:12:04,035 DEBUG   :             PartitionDevice.updateSysfsPath: sda3 ; status: True ;
+12:12:04,036 DEBUG   :              PartitionDevice.updateSysfsPath: sda3 ; status: True ;
+12:12:04,036 DEBUG   : sda3 sysfsPath set to /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda3
+12:12:04,055 INFO    : setting boot flag on sda1
+12:12:04,056 DEBUG   :            PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 1 ;
+12:12:04,058 DEBUG   :            PartitionDevice.setFlag: path: /dev/sda1 ; flag: 1 ;
+12:12:04,060 DEBUG   :             PartitionDevice.flagAvailable: path: /dev/sda1 ; flag: 1 ;
+12:12:04,061 DEBUG   :           DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:04,062 DEBUG   :           DiskLabel.commitToDisk: device: /dev/sda ; numparts: 3 ;
+12:12:04,072 DEBUG   :                Ext4FS.supported: supported: True ;
+12:12:04,080 DEBUG   :                Ext4FS.supported: supported: True ;
+12:12:04,083 DEBUG   :               OpticalDevice.mediaPresent: sr0 ; status: True ;
+12:12:04,088 DEBUG   :               Iso9660FS.supported: supported: True ;
+12:12:04,090 DEBUG   :            PartitionDevice.setup: sda2 ; status: True ; orig: False ;
+12:12:04,091 DEBUG   :             PartitionDevice.setupParents: kids: 0 ; name: sda2 ; orig: False ;
+12:12:04,092 DEBUG   :              DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:04,094 DEBUG   :             DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,095 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,096 DEBUG   :            SwapSpace.setup: device: /dev/sda2 ; status: False ; type: swap ;
+12:12:04,098 DEBUG   :             SwapSpace.setup: device: /dev/sda2 ; status: False ; type: swap ;
+12:12:04,108 DEBUG   :               BindFS.supported: supported: False ;
+12:12:04,109 DEBUG   :               BindFS.supported: supported: False ;
+12:12:04,109 DEBUG   : getFormat('bind') returning BindFS instance
+12:12:04,110 DEBUG   :                DirectoryDevice._setFormat: /dev ; current: None ; type: bind ;
+12:12:04,111 DEBUG   :                TmpFS.supported: supported: False ;
+12:12:04,111 DEBUG   : getFormat('tmpfs') returning TmpFS instance
+12:12:04,112 DEBUG   :                NoDevice._setFormat: tmpfs ; current: None ; type: tmpfs ;
+12:12:04,114 DEBUG   :                DevPtsFS.supported: supported: False ;
+12:12:04,114 DEBUG   : getFormat('devpts') returning DevPtsFS instance
+12:12:04,115 DEBUG   :                NoDevice._setFormat: devpts ; current: None ; type: devpts ;
+12:12:04,115 DEBUG   :                SysFS.supported: supported: False ;
+12:12:04,116 DEBUG   : getFormat('sysfs') returning SysFS instance
+12:12:04,116 DEBUG   :                NoDevice._setFormat: sysfs ; current: None ; type: sysfs ;
+12:12:04,117 DEBUG   :                ProcFS.supported: supported: False ;
+12:12:04,117 DEBUG   : getFormat('proc') returning ProcFS instance
+12:12:04,118 DEBUG   :                NoDevice._setFormat: proc ; current: None ; type: proc ;
+12:12:04,119 DEBUG   :            PartitionDevice.setup: sda3 ; status: True ; orig: False ;
+12:12:04,120 DEBUG   :             PartitionDevice.setupParents: kids: 0 ; name: sda3 ; orig: False ;
+12:12:04,121 DEBUG   :              DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:04,121 DEBUG   :             DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,122 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,123 INFO    : set SELinux context for mountpoint / to None
+12:12:04,134 INFO    : set SELinux context for newly mounted filesystem root at / to system_u:object_r:root_t:s0
+12:12:04,137 DEBUG   :            PartitionDevice.setup: sda1 ; status: True ; orig: False ;
+12:12:04,138 DEBUG   :             PartitionDevice.setupParents: kids: 0 ; name: sda1 ; orig: False ;
+12:12:04,141 DEBUG   :              DiskDevice.setup: sda ; status: True ; orig: False ;
+12:12:04,142 DEBUG   :             DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,144 DEBUG   :              DiskLabel.setup: device: /dev/sda ; status: False ; type: disklabel ;
+12:12:04,145 INFO    : set SELinux context for mountpoint /boot to system_u:object_r:boot_t:s0
+12:12:04,156 INFO    : set SELinux context for newly mounted filesystem root at /boot to system_u:object_r:boot_t:s0
+12:12:04,159 DEBUG   :             DirectoryDevice.setup: /dev ; status: True ; orig: False ;
+12:12:04,161 DEBUG   :              DirectoryDevice.setupParents: kids: 0 ; name: /dev ; orig: False ;
+12:12:04,163 INFO    : set SELinux context for mountpoint /dev to system_u:object_r:device_t:s0
+12:12:04,167 INFO    : set SELinux context for newly mounted filesystem root at /dev to system_u:object_r:device_t:s0
+12:12:04,169 DEBUG   :            NoDevice.setup: devpts ; status: False ; orig: False ;
+12:12:04,171 INFO    : set SELinux context for mountpoint /dev/pts to system_u:object_r:devpts_t:s0
+12:12:04,178 INFO    : set SELinux context for newly mounted filesystem root at /dev/pts to system_u:object_r:devpts_t:s0
+12:12:04,181 DEBUG   :            NoDevice.setup: tmpfs ; status: False ; orig: False ;
+12:12:04,183 INFO    : set SELinux context for mountpoint /dev/shm to system_u:object_r:tmpfs_t:s0
+12:12:04,187 INFO    : set SELinux context for newly mounted filesystem root at /dev/shm to system_u:object_r:tmpfs_t:s0
+12:12:04,188 DEBUG   :            NoDevice.setup: proc ; status: False ; orig: False ;
+12:12:04,189 INFO    : set SELinux context for mountpoint /proc to None
+12:12:04,195 INFO    : set SELinux context for newly mounted filesystem root at /proc to None
+12:12:04,197 DEBUG   :            NoDevice.setup: sysfs ; status: False ; orig: False ;
+12:12:04,198 INFO    : set SELinux context for mountpoint /sys to system_u:object_r:sysfs_t:s0
+12:12:04,207 INFO    : set SELinux context for newly mounted filesystem root at /sys to system_u:object_r:sysfs_t:s0
+12:12:04,215 DEBUG   : looking for device 'sda'...
+12:12:04,216 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:12:04,227 DEBUG   : looking for device 'sda3'...
+12:12:04,227 DEBUG   : looking up parted Device: /dev/sda3
+12:12:04,238 DEBUG   :                Ext4FS.supported: supported: True ;
+12:12:04,242 DEBUG   : found PartitionDevice instance (0x7f7357387050) --
+  name = sda3  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 10
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f7357387750>  size = 9271.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda3  partedDevice = <parted.device.Device object at 0x7f735aabd850>
+  target size = 200  path = /dev/sda3
+  format args = []  originalFormat = Ext4FS instance (0x7f7357387750) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda3  uuid = b3a88d2b-b491-46ff-96a1-a9eff1a5c3a5  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = True  max size = 0  bootable = False
+  part type = 0  primary = None
+  partedPartition = <parted.partition.Partition object at 0x7f735738ee10>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 1984512  end = 20971519  length = 18987008
+  flags = 
+12:14:33,323 DEBUG   : looking for device 'sda'...
+12:14:33,323 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:14:33,326 DEBUG   :                  OpticalDevice.mediaPresent: sr0 ; status: True ;
+12:14:33,332 DEBUG   :                  Iso9660FS.supported: supported: True ;
+12:14:33,333 DEBUG   : updating format of device: OpticalDevice instance (0x7f735a909fd0) --
+  name = sr0  status = True  parents = []
+  kids = 0
+  id = 3
+  uuid = None  format = <storage.formats.fs.Iso9660FS object at 0x7f735a909810>  size = 3788.0
+  major = 11  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0  partedDevice = <parted.device.Device object at 0x7f735a9098d0>
+  target size = 0  path = /dev/sr0
+  format args = []  originalFormat = Iso9660FS instance (0x7f735a909810) --
+  type = iso9660  name = iso9660  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = ro  supported = True  formattable = False  resizable = False
+  mountpoint = None  mountopts = None
+  label = CentOS_6.9_Final  size = 0  targetSize = 0
+
+12:14:33,439 DEBUG   :               DeviceTree.handleUdevDeviceFormat: name: sr0 ;
+12:14:33,441 DEBUG   :                DeviceTree.handleUdevDiskLabelFormat: device: sr0 ;
+12:14:33,443 DEBUG   :                   Iso9660FS.supported: supported: True ;
+12:14:33,443 DEBUG   : getFormat('iso9660') returning Iso9660FS instance
+12:14:33,444 DEBUG   : device sr0 does not contain a disklabel
+12:14:33,444 DEBUG   : no type or existing type for sr0, bailing
+12:14:33,446 DEBUG   :                 Iso9660FS.supported: supported: True ;
+12:14:33,446 DEBUG   : got format: Iso9660FS instance (0x7f735a909810) --
+  type = iso9660  name = iso9660  status = False
+  device = /dev/sr0  uuid = None  exists = True
+  options = ro  supported = True  formattable = False  resizable = False
+  mountpoint = None  mountopts = None
+  label = CentOS_6.9_Final  size = 0  targetSize = 0
+
+12:14:33,447 INFO    : set SELinux context for mountpoint /mnt/source to None
+12:14:33,455 INFO    : set SELinux context for newly mounted filesystem root at /mnt/source to None
+12:19:50,967 INFO    : not writing out mpath configuration
+12:19:50,977 INFO    : not writing out mpath configuration
+12:24:11,543 DEBUG   : looking for device 'sda3'...
+12:24:11,552 DEBUG   :                 Ext4FS.supported: supported: True ;
+12:24:11,554 DEBUG   : found PartitionDevice instance (0x7f7357387050) --
+  name = sda3  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 10
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f7357387750>  size = 9271.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda3  partedDevice = <parted.device.Device object at 0x7f735aabd850>
+  target size = 200  path = /dev/sda3
+  format args = []  originalFormat = Ext4FS instance (0x7f7357387750) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda3  uuid = b3a88d2b-b491-46ff-96a1-a9eff1a5c3a5  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = True  max size = 0  bootable = False
+  part type = 0  primary = None
+  partedPartition = <parted.partition.Partition object at 0x7f735738ee10>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 1984512  end = 20971519  length = 18987008
+  flags = 
+12:24:11,889 DEBUG   : looking for device 'sda1'...
+12:24:11,889 DEBUG   : looking up parted Device: /dev/sda1
+12:24:11,899 DEBUG   :                     Ext4FS.supported: supported: True ;
+12:24:11,904 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,905 DEBUG   : looking for device 'sda1'...
+12:24:11,912 DEBUG   :                      Ext4FS.supported: supported: True ;
+12:24:11,916 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,917 DEBUG   : looking for device 'sda1'...
+12:24:11,923 DEBUG   :                      Ext4FS.supported: supported: True ;
+12:24:11,925 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,926 DEBUG   : looking for device 'sda1'...
+12:24:11,927 DEBUG   :                      Ext4FS.supported: supported: True ;
+12:24:11,928 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,930 DEBUG   : looking for device 'sda'...
+12:24:11,931 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:24:11,931 DEBUG   : looking for device 'sda1'...
+12:24:11,932 DEBUG   :                    Ext4FS.supported: supported: True ;
+12:24:11,933 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,933 DEBUG   : looking for device 'sda'...
+12:24:11,934 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:24:11,934 DEBUG   : looking for device 'sda1'...
+12:24:11,936 DEBUG   :                     Ext4FS.supported: supported: True ;
+12:24:11,937 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,938 DEBUG   : looking for device 'sda'...
+12:24:11,938 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:24:11,938 DEBUG   : looking for device 'sda'...
+12:24:11,938 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:24:11,939 DEBUG   : looking for device 'sda1'...
+12:24:11,940 DEBUG   :                     Ext4FS.supported: supported: True ;
+12:24:11,941 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:11,941 DEBUG   : looking for device 'sda'...
+12:24:11,942 DEBUG   : found DiskDevice instance (0x7f735a909590) --
+  name = sda  status = True  parents = []
+  kids = 3
+  id = 2
+  uuid = None  format = <storage.formats.disklabel.DiskLabel object at 0x7f735a9099d0>  size = 10240.0
+  major = 8  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+  target size = 0  path = /dev/sda
+  format args = []  originalFormat = DiskLabel instance (0x7f735a9099d0) --
+  type = disklabel  name = partition table (MSDOS)  status = False
+  device = /dev/sda  uuid = None  exists = True
+  options = None  supported = False  formattable = True  resizable = False
+  type = msdos  partition count = 3  sectorSize = 512
+  align_offset = 0  align_grain = 2048
+  partedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  origPartedDisk = <parted.disk.Disk object at 0x7f735a909d10>
+  partedDevice = <parted.device.Device object at 0x7f735a909a10>
+  removable = False  partedDevice = <parted.device.Device object at 0x7f735a9094d0>
+12:24:11,942 DEBUG   : looking for device 'sda1'...
+12:24:11,943 DEBUG   :                      Ext4FS.supported: supported: True ;
+12:24:11,944 DEBUG   : found PartitionDevice instance (0x7f7357358550) --
+  name = sda1  status = True  parents = [<storage.devices.DiskDevice object at 0x7f735a909590>]
+  kids = 0
+  id = 6
+  uuid = None  format = <storage.formats.fs.Ext4FS object at 0x7f73573584d0>  size = 200.0
+  major = 0  minor = 0  exists = True
+  sysfs path = /devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1  partedDevice = <parted.device.Device object at 0x7f7351e08f50>
+  target size = 200  path = /dev/sda1
+  format args = []  originalFormat = Ext4FS instance (0x7f73573584d0) --
+  type = ext4  name = ext4  status = True
+  device = /dev/sda1  uuid = 8848e519-989b-4a1f-9fdb-803f0b56db57  exists = True
+  options = defaults  supported = True  formattable = True  resizable = True
+  mountpoint = /boot  mountopts = None
+  label = None  size = 0  targetSize = 0
+  grow = None  max size = 0  bootable = True
+  part type = 0  primary = True
+  partedPartition = <parted.partition.Partition object at 0x7f735738e950>  disk = <storage.devices.DiskDevice object at 0x7f735a909590>
+  start = 2048  end = 411647  length = 409600
+  flags = boot
+12:24:12,179 WARNING : Storage.writeKS not completely implemented

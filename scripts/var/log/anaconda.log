@@ -1,0 +1,278 @@
+10:56:48,545 INFO    : kernel command line: initrd=initrd.img BOOT_IMAGE=vmlinuz 
+
+10:56:48,545 DEBUG   : readNetInfo /tmp/s390net not found, early return
+10:56:48,545 INFO    : anaconda version 13.21.263 on x86_64 starting
+10:56:51,684 DEBUG   : Saving module ipv6
+10:56:51,684 DEBUG   : Saving module iscsi_ibft
+10:56:51,684 DEBUG   : Saving module iscsi_boot_sysfs
+10:56:51,684 DEBUG   : Saving module pcspkr
+10:56:51,684 DEBUG   : Saving module edd
+10:56:51,684 DEBUG   : Saving module iscsi_tcp
+10:56:51,684 DEBUG   : Saving module libiscsi_tcp
+10:56:51,684 DEBUG   : Saving module libiscsi
+10:56:51,684 DEBUG   : Saving module scsi_transport_iscsi
+10:56:51,684 DEBUG   : Saving module squashfs
+10:56:51,684 DEBUG   : Saving module cramfs
+10:56:51,685 DEBUG   : probing buses
+10:56:51,735 DEBUG   : waiting for hardware to initialize
+10:56:55,408 DEBUG   : probing buses
+10:56:55,464 DEBUG   : waiting for hardware to initialize
+10:56:58,787 INFO    : trying to mount CD device /dev/sr0 on /mnt/stage2
+10:56:58,789 INFO    : drive status is CDS_DISC_OK
+10:58:31,665 INFO    : transferring /mnt/stage2/images/install.img to /tmp
+10:58:33,725 INFO    : mounted loopback device /mnt/runtime on /dev/loop0 as /tmp/install.img
+10:58:33,725 INFO    : Looking for updates in /mnt/stage2/images/updates.img
+10:58:33,725 INFO    : Looking for product in /mnt/stage2/images/product.img
+10:58:33,725 INFO    : Detected stage 2 image on CD (url: cdrom:///dev/sr0:/mnt/stage2)
+10:58:36,726 INFO    : starting STEP_METHOD
+10:58:36,726 DEBUG   : loaderData->method is set, adding skipMethodDialog
+10:58:36,726 DEBUG   : skipMethodDialog is set
+10:58:36,727 INFO    : stage2 url is cdrom:///dev/sr0:/mnt/stage2
+10:58:36,779 INFO    : Loading SELinux policy
+10:58:37,837 INFO    : getting ready to spawn shell now
+10:58:38,154 INFO    : Running anaconda script /usr/bin/anaconda
+10:58:40,466 INFO    : CentOS Linux is the highest priority installclass, using it
+10:58:40,469 INFO    : created new libuser.conf at /tmp/libuser.oIZ1Ke with instPath="/mnt/sysimage"
+10:58:40,470 INFO    : anaconda called with cmdline = ['/usr/bin/anaconda', '--stage2', 'cdrom:///dev/sr0:/mnt/stage2', '--graphical', '--selinux']
+10:58:40,470 INFO    : Display mode = g
+10:58:40,470 INFO    : Default encoding = utf-8 
+10:58:41,111 DEBUG   : X server has signalled a successful start.
+10:58:41,112 INFO    : Starting window manager, pid 761.
+10:58:41,229 INFO    : Starting graphical installation.
+10:58:41,638 INFO    : Detected 3952M of memory
+10:58:41,638 INFO    : Swap attempt of 3952M
+10:58:41,684 WARNING : step installtype does not exist
+10:58:41,684 WARNING : step confirminstall does not exist
+10:58:41,684 WARNING : step complete does not exist
+10:58:42,996 INFO    : moving (1) to step welcome
+11:03:42,719 INFO    : leaving (1) step welcome
+11:03:42,720 INFO    : moving (1) to step language
+11:05:11,304 INFO    : leaving (1) step language
+11:05:11,304 INFO    : moving (1) to step keyboard
+11:05:21,378 INFO    : leaving (1) step keyboard
+11:05:21,378 INFO    : moving (1) to step filtertype
+11:09:01,555 INFO    : leaving (1) step filtertype
+11:09:01,555 INFO    : moving (1) to step filter
+11:09:01,574 INFO    : leaving (1) step filter
+11:09:01,574 INFO    : moving (1) to step storageinit
+11:09:01,574 DEBUG   : storageinit is a direct step
+11:09:01,677 INFO    : ISCSID is /usr/sbin/iscsid
+11:09:01,677 INFO    : no initiator set
+11:09:01,740 WARNING : '/usr/libexec/fcoe/fcoe_edd.sh' specified as full path
+11:09:01,751 INFO    : No FCoE EDD info found: No FCoE boot disk information is found in EDD!
+
+11:09:01,751 INFO    : no /etc/zfcp.conf; not configuring zfcp
+11:09:17,050 INFO    : leaving (1) step storageinit
+11:09:17,051 INFO    : moving (1) to step findrootparts
+11:09:17,051 DEBUG   : findrootparts is a direct step
+11:09:17,051 WARNING : step complete does not exist
+11:09:17,051 INFO    : leaving (1) step findrootparts
+11:09:17,051 INFO    : moving (1) to step network
+11:11:45,746 INFO    : setting installation environment hostname to oldboyedu-01
+11:11:45,754 INFO    : leaving (1) step network
+11:11:45,754 INFO    : moving (1) to step timezone
+11:13:04,922 INFO    : leaving (1) step timezone
+11:13:04,923 INFO    : moving (1) to step accounts
+11:13:26,163 INFO    : leaving (1) step accounts
+11:13:26,164 INFO    : moving (1) to step setuptime
+11:13:26,164 DEBUG   : setuptime is a direct step
+19:13:26,164 WARNING : '/usr/sbin/hwclock' specified as full path
+11:13:27,000 INFO    : leaving (1) step setuptime
+11:13:27,001 INFO    : moving (1) to step parttype
+11:17:34,824 INFO    : ISCSID is /usr/sbin/iscsid
+11:17:34,825 INFO    : no initiator set
+11:17:34,931 INFO    : UI not asking about disk initialization, using cached answer: True
+11:17:35,064 INFO    : leaving (1) step parttype
+11:17:35,064 INFO    : moving (1) to step partition
+11:23:47,838 DEBUG   : refresh: justRedraw=True
+11:25:27,467 DEBUG   : refresh: justRedraw=False
+11:30:05,301 DEBUG   : refresh: justRedraw=False
+11:31:35,355 DEBUG   : refresh: justRedraw=False
+12:11:52,484 INFO    : leaving (1) step partition
+12:11:52,485 INFO    : moving (1) to step storagedone
+12:11:52,485 DEBUG   : storagedone is a direct step
+12:12:00,936 INFO    : leaving (1) step storagedone
+12:12:00,936 INFO    : moving (1) to step enablefilesystems
+12:12:00,936 DEBUG   : enablefilesystems is a direct step
+12:12:01,609 DEBUG   : notifying kernel of 'change' event on device /sys/class/block/sda1
+12:12:03,979 DEBUG   : notifying kernel of 'change' event on device /sys/class/block/sda3
+12:12:04,123 INFO    : failed to set SELinux context for /mnt/sysimage: [Errno 95] Operation not supported
+12:12:04,123 DEBUG   : isys.py:mount()- going to mount /dev/sda3 on /mnt/sysimage as ext4 with options defaults
+12:12:04,146 DEBUG   : isys.py:mount()- going to mount /dev/sda1 on /mnt/sysimage/boot as ext4 with options defaults
+12:12:04,163 DEBUG   : isys.py:mount()- going to mount //dev on /mnt/sysimage/dev as bind with options defaults,bind
+12:12:04,172 DEBUG   : isys.py:mount()- going to mount devpts on /mnt/sysimage/dev/pts as devpts with options gid=5,mode=620
+12:12:04,183 DEBUG   : isys.py:mount()- going to mount tmpfs on /mnt/sysimage/dev/shm as tmpfs with options defaults
+12:12:04,189 INFO    : failed to get default SELinux context for /proc: [Errno 2] No such file or directory
+12:12:04,190 DEBUG   : isys.py:mount()- going to mount proc on /mnt/sysimage/proc as proc with options defaults
+12:12:04,194 INFO    : failed to get default SELinux context for /proc: [Errno 2] No such file or directory
+12:12:04,198 DEBUG   : isys.py:mount()- going to mount sysfs on /mnt/sysimage/sys as sysfs with options defaults
+12:12:04,207 INFO    : leaving (1) step enablefilesystems
+12:12:04,207 INFO    : moving (1) to step bootloadersetup
+12:12:04,207 DEBUG   : bootloadersetup is a direct step
+12:12:04,209 WARNING : '/usr/sbin/dmidecode' specified as full path
+12:12:04,217 INFO    : leaving (1) step bootloadersetup
+12:12:04,217 INFO    : moving (1) to step bootloader
+12:14:33,323 INFO    : leaving (1) step bootloader
+12:14:33,323 INFO    : moving (1) to step reposetup
+12:14:33,323 DEBUG   : reposetup is a direct step
+12:14:33,333 DEBUG   : notifying kernel of 'change' event on device /sys/devices/pci0000:00/0000:00:07.1/host1/target1:0:0/1:0:0:0/block/sr0
+12:14:33,447 INFO    : failed to set SELinux context for /mnt/source: [Errno 95] Operation not supported
+12:14:33,447 DEBUG   : isys.py:mount()- going to mount /dev/sr0 on /mnt/source as iso9660 with options ro
+12:14:33,455 INFO    : failed to set SELinux context for /mnt/source: [Errno 30] Read-only file system
+12:14:33,460 INFO    : found installation media on sr0
+12:14:33,578 INFO    : set mediaid of repo CentOS to: 1490725192.865456
+12:14:34,899 INFO    : leaving (1) step reposetup
+12:14:34,899 INFO    : moving (1) to step tasksel
+12:17:32,153 INFO    : leaving (1) step tasksel
+12:17:32,153 INFO    : moving (1) to step basepkgsel
+12:17:32,153 DEBUG   : basepkgsel is a direct step
+12:17:32,266 INFO    : leaving (1) step basepkgsel
+12:17:32,266 INFO    : moving (1) to step group-selection
+12:19:46,602 INFO    : leaving (1) step group-selection
+12:19:46,603 INFO    : moving (1) to step postselection
+12:19:46,603 DEBUG   : postselection is a direct step
+12:19:46,614 INFO    : selected kernel package for kernel
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/xfs/xfs.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/exportfs/exportfs.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/fat/vfat.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/fat/fat.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext3/ext3.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/jbd/jbd.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext2/ext2.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/ext4/ext4.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/jbd2/jbd2.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/mbcache.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/fcoe/fcoe.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/fcoe/libfcoe.ko.gz
+12:19:47,713 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libfc/libfc.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_fc.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_tgt.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/xts.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/lrw.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/gf128mul.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/cbc.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-raid.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-crypt.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-round-robin.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-multipath.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-thin-pool.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-bio-prison.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/persistent-data/dm-persistent-data.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/libcrc32c.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-snapshot.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-bufio.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-mirror.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-region-hash.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-log.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-zero.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/dm-mod.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/linear.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid10.ko.gz
+12:19:47,714 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid456.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_raid6_recov.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_pq.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/raid6/raid6_pq.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_xor.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/xor.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_memcpy.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/crypto/async_tx/async_tx.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid1.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/md/raid0.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/net/8021q/8021q.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/net/802/garp.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/net/802/stp.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/net/llc/llc.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/hw/mlx4/mlx4_ib.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/mlx4/mlx4_en.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ptp/ptp.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/pps/pps_core.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/mlx4/mlx4_core.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/ulp/ipoib/ib_ipoib.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_cm.ko.gz
+12:19:47,715 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_sa.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_mad.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_core.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/infiniband/core/ib_addr.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sg.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sd_mod.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/lib/crc-t10dif.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/sr_mod.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/cdrom/cdrom.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/misc/vmware_balloon.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/net/e1000/e1000.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/vmwgfx/vmwgfx.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/ttm/ttm.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/drm_kms_helper.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/gpu/drm/drm.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/i2c/i2c-core.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptspi.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptscsih.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/message/fusion/mptbase.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_spi.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/pata_acpi.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/ata_generic.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/ata/ata_piix.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/net/ipv6/ipv6.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/firmware/iscsi_ibft.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/iscsi_boot_sysfs.ko.gz
+12:19:47,716 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/input/misc/pcspkr.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/firmware/edd.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/iscsi_tcp.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libiscsi_tcp.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/libiscsi.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/drivers/scsi/scsi_transport_iscsi.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/squashfs/squashfs.ko.gz
+12:19:47,717 DEBUG   : Checking for DUD module /lib/modules/2.6.32-696.el6.x86_64/kernel/fs/cramfs/cramfs.ko.gz
+12:19:47,717 DEBUG   : selecting kernel-devel
+12:19:50,913 INFO    : leaving (1) step postselection
+12:19:50,913 INFO    : moving (1) to step install
+12:19:50,930 INFO    : leaving (1) step install
+12:19:50,930 INFO    : moving (1) to step preinstallconfig
+12:19:50,930 DEBUG   : preinstallconfig is a direct step
+12:19:50,944 DEBUG   : isys.py:mount()- going to mount /selinux on /mnt/sysimage/selinux as selinuxfs with options defaults
+12:19:50,954 DEBUG   : isys.py:mount()- going to mount /proc/bus/usb on /mnt/sysimage/proc/bus/usb as usbfs with options defaults
+12:19:50,967 INFO    : copy_to_sysimage: source '/etc/multipath/wwids' does not exist.
+12:19:50,968 INFO    : copy_to_sysimage: source '/etc/multipath/bindings' does not exist.
+12:19:50,977 INFO    : copy_to_sysimage: source '/etc/multipath/wwids' does not exist.
+12:19:50,977 INFO    : copy_to_sysimage: source '/etc/multipath/bindings' does not exist.
+12:19:50,988 INFO    : leaving (1) step preinstallconfig
+12:19:50,988 INFO    : moving (1) to step installpackages
+12:19:50,989 DEBUG   : installpackages is a direct step
+12:19:50,989 INFO    : Preparing to install packages
+12:19:50,989 DEBUG   : isys.py:umount()- going to unmount /mnt/stage2, removeDir = True
+12:24:11,113 INFO    : leaving (1) step installpackages
+12:24:11,113 INFO    : moving (1) to step postinstallconfig
+12:24:11,113 DEBUG   : postinstallconfig is a direct step
+12:24:11,125 DEBUG   : Removing cachedir: /mnt/sysimage/var/cache/yum/anaconda-CentOS-201703281317.x86_64
+12:24:11,128 INFO    : leaving (1) step postinstallconfig
+12:24:11,128 INFO    : moving (1) to step writeconfig
+12:24:11,128 DEBUG   : writeconfig is a direct step
+12:24:11,128 INFO    : Writing main configuration
+12:24:11,133 WARNING : '/usr/sbin/authconfig' specified as full path
+12:24:11,289 WARNING : '/usr/sbin/lokkit' specified as full path
+12:24:11,321 WARNING : '/usr/sbin/lokkit' specified as full path
+12:24:11,367 INFO    : removing libuser.conf at /tmp/libuser.oIZ1Ke
+12:24:11,367 INFO    : created new libuser.conf at /tmp/libuser.oIZ1Ke with instPath="/mnt/sysimage"
+12:24:11,536 INFO    : leaving (1) step writeconfig
+12:24:11,536 INFO    : moving (1) to step firstboot
+12:24:11,536 DEBUG   : firstboot is a direct step
+12:24:11,536 INFO    : leaving (1) step firstboot
+12:24:11,536 INFO    : moving (1) to step instbootloader
+12:24:11,536 DEBUG   : instbootloader is a direct step
+12:24:11,990 WARNING : '/sbin/grub-install' specified as full path
+12:24:12,068 WARNING : '/sbin/grub' specified as full path
+12:24:12,168 INFO    : leaving (1) step instbootloader
+12:24:12,169 INFO    : moving (1) to step reipl
+12:24:12,169 DEBUG   : reipl is a direct step
+12:24:12,169 INFO    : leaving (1) step reipl
+12:24:12,169 INFO    : moving (1) to step writeksconfig
+12:24:12,170 DEBUG   : writeksconfig is a direct step
+12:24:12,170 INFO    : Writing autokickstart file
+12:24:12,506 INFO    : leaving (1) step writeksconfig
+12:24:12,506 INFO    : moving (1) to step setfilecon
+12:24:12,506 DEBUG   : setfilecon is a direct step
+12:24:12,506 INFO    : setting SELinux contexts for anaconda created files
+12:24:18,321 INFO    : leaving (1) step setfilecon
+12:24:18,321 INFO    : moving (1) to step copylogs
+12:24:18,321 DEBUG   : copylogs is a direct step
+12:24:18,321 INFO    : Copying anaconda logs
